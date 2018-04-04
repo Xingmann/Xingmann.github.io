@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html{
+	margin:0;
+}
+div{
+	margin: 0px;
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+}
+#defaultCanvas0{
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 0;
+  background-color: red;
+}
+#circle{
+	display: inline-block;
+  position:absolute;
+	border:groove 35px #CD5C5C;
+	border-radius: 50%;
+  top: 10px;
+  left:50px;
+  transition: transform 0.1s ease-in-out;
+}
+#square{
+	display: inline-block;
+  position:absolute;
+  top:10px;
+  left:260px;
+	border:groove 35px #117864;
+	border-radius:3px;
+/*  margin-left:60px;*/
+  transition: transform 0.1s ease-in-out;
+}
+#recA{
+	background-color: #154360;
+  border-radius: 3px;
+  padding: 10px;
+  width: 60px;
+  height: 100px;
+  box-sizing: border-box;
+  position: absolute;
+  left:160px;
+  top:100px;
+  transition: transform 0.1s ease-in-out;
+}
+#recB{
+	background-color: #2980B9;
+  border-radius: 3px;
+  padding: 10px;
+  width: 220px;
+  box-sizing: border-box;
+  position: absolute;
+  left:90px;
+  top:480px;
+  transition: transform 0.1s ease-in-out;
+}
+#oval{
+/*	display: inline-block;*/
+	height:85px;
+	width:60px;
+	background-color: #DC5F1D;
+	border-radius: 50%;
+  position: absolute;
+  left:15px;
+  top:340px;
+  transition: transform 0.1s ease-in-out;
+}
+#triA{
+	display: inline-block;
+	border:groove 35px;
+	border-color: #884EA0 #884EA0 transparent transparent;
+	border-radius: 2px;
+  position: absolute;
+  left:300px;
+  top:350px;
+  transition: transform 0.1s ease-in-out;
+}
+#triB{
+	width:0;
+	height:0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 80px solid #85C1E9;
+  position: absolute;
+  left:30px;
+  top:220px;
+  transition: transform 0.1s ease-in-out;
+}
+#trapezoid{
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 55px solid #EC7063;
+	width: 50px;
+	border-radius: 3px;
+  position: absolute;
+  left:260px;
+  top:240px;
+  transition: transform 0.1s ease-in-out;
+}
+#para{
+	width: 85px;
+	height: 55px;
+	transform: skew(20deg);
+	background: #F7DC6F;
+	border-radius: 3px;
+  position: absolute;
+  left:150px;
+  top:360px;
+  transition: transform 0.1s ease-in-out;
+}
+/*#gesture-area{
+	overflow: hidden;
+}*/
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <div id="circle"></div>
+    <div id="square"></div>
+    <div id="recA"></div>
+    <div id="triB"></div>
+    <div id="trapezoid"></div>
+    <div id="oval"></div>
+    <div id="para"></div>             
+    <div id="triA"></div>
+    <div id="recB"></div> 
+</div>
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+<script src="https://unpkg.com/interactjs@1.3.3/dist/interact.min.js"></script>
+<script src="ColorChanging.js"></script>
+<script src="Rotating.js"></script>
+<script src="Zooming.js"></script>
+<script src="Dragging.js"></script>
+<script>
+
+//Setting Canvas
+function setup() {
+  createCanvas(1000, 1000);
+  background('#fbf3d4');
+}
+
+//SHAKING
+function draw() {
+  shakeChangeBackground();
+}
+  var threshold = 30;
+  var accChangeX = 0; 
+  var accChangeY = 0;
+  var accChangeT = 0;
+
+function shakeChangeBackground(){
+  var nowAccelX = accelerationX - pAccelerationX;
+  var nowAccelY = accelerationY - pAccelerationY;
+  var nowAccelZ = accelerationZ - pAccelerationZ;
+  //                       or
+  if(nowAccelX > threshold || nowAccelY > threshold || nowAccelZ > threshold){
+    background(random(0,255), random(0,255), random(0,255));
+  }
+}
+
+//Sepcial Case for the two Recs
+function dragMoveListener (event) {
+    var target = event.target,
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+
+//RESIZING
+   interact('#recB,#recA').draggable({
+    onmove: window.dragMoveListener,
+  })
+  .resizable({    
+    edges: { left: true, right: true, bottom: true, top: true },
+    restrictSize: {
+    min: { width: 1, height: 1 },
+    },
+   	inertia: true,
+  })
+  .on('resizemove', function (event) {
+    var target = event.target,
+        x = (parseFloat(target.getAttribute('data-x')) || 0),
+        y = (parseFloat(target.getAttribute('data-y')) || 0);
+
+    target.style.width  = event.rect.width + 'px';
+    target.style.height = event.rect.height + 'px';
+  });
+
+
+////////////////////////////////
+// interact('#circle,#square,#oval,#triA,#triB,#trapezoid,#para').draggable({
+//   onmove: window.dragMoveListener
+// })
+
+// hide P5js canvas
+// document.addEventListener("DOMContentLoaded", function() {
+//   setInterval(function(){
+//     document.getElementById("defaultCanvas0").style.display = "none";
+//   },200);
+// });
+
+</script>
+</html>
