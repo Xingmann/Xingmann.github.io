@@ -36,7 +36,7 @@ interact('#circle').gesturable({
 	onmove:function(event){
 	var circle = document.getElementById('circle');
 	anglea += event.da;
-	circle.style.transform = 'translate(' + x + 'px, ' + y + 'px) rotate('+anglea+'deg) scale(' + scalea +')';
+	circle.style.transform = 'rotate('+anglea+'deg) scale(' + scalea +') translate(' + x + 'px, ' + y + 'px)';
 	}
 });
 
@@ -49,7 +49,7 @@ var interval;
 		if(scalea >= 2){
 			scalea = 2;
 		}
-		a.style.transform = 'translate(' + x + 'px, ' + y + 'px) scale(' + scalea +') rotate(' + anglea + 'deg)';
+		a.style.transform = 'scale(' + scalea +') rotate(' + anglea + 'deg) translate(' + x + 'px, ' + y + 'px)';
 	},400);
 	})
 	a.addEventListener('touchend', function(){
