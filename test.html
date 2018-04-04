@@ -7,7 +7,7 @@
 	display: inline-block;
 	border:groove 25px #CD5C5C;
 	border-radius: 50%;
-	transition: transform 0.01s ease-in-out;
+/*	transition: transform 0.01s ease-in-out;*/
 }
 </style>
 </head>
@@ -51,7 +51,7 @@ var interval;
 			scalea = 3;
 		}
 		a.style.transform = 'scale(' + scalea +') rotate(' + anglea + 'deg) translate(' + x + 'px, ' + y + 'px)';
-	},100);
+	},200);
 	})
 	a.addEventListener('touchend', function(){
 		clearInterval(interval);
