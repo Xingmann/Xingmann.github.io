@@ -7,7 +7,7 @@ var interval;
 		if(scalea >= 2){
 			scalea = 2;
 		}
-		a.style.transform = 'scale(' + scalea +') rotate(' + anglea + 'deg)';
+		a.style.transform = 'scale(' + scalea +') rotate(' + anglea + 'deg) translate(' + x + 'px, ' + y + 'px)';
 	},400);
 	})
 	a.addEventListener('touchend', function(){
@@ -23,7 +23,7 @@ var interval;
 		if(scaleb >= 2){
 			scaleb = 2;
 		}
-		b.style.transform = 'scale(' + scaleb +') rotate(' + angleb + 'deg)';
+		b.style.transform = 'scale(' + scaleb +') rotate(' + angleb + 'deg) translate(' + x + 'px, ' + y + 'px)';
 	},400);
 	})
 	b.addEventListener('touchend', function(){
@@ -71,7 +71,7 @@ var interval;
 		if(scalee >= 2){
 			scalee = 2;
 		}
-		e.style.transform = 'scale(' + scalee +') rotate(' + anglee + 'deg)';
+		e.style.transform = 'scale(' + scalee +') rotate(' + anglee + 'deg) translate(' + x + 'px, ' + y + 'px)';
 	},400);
 	})
 	e.addEventListener('touchend', function(){
@@ -86,8 +86,8 @@ var interval;
 		scalef = scalef + 0.1;
 		if(scalef >= 2){
 			scalef = 2;
-		}
-		f.style.transform = 'scale(' + scalef +') rotate(' + anglef + 'deg)';
+		} 
+		f.style.transform = 'scale(' + scalef +') rotate(' + anglef + 'deg) translate(' + x + 'px, ' + y + 'px)';
 	},400);
 	})
 	f.addEventListener('touchend', function(){
@@ -103,7 +103,7 @@ var interval;
 		if(scaleg >= 2){
 			scaleg = 2;
 		}
-		g.style.transform = 'scale(' + scaleg +') rotate(' + angleg + 'deg)';
+		g.style.transform = 'scale(' + scaleg +') rotate(' + angleg + 'deg) translate(' + x + 'px, ' + y + 'px)';
 	},400);
 	})
 	g.addEventListener('touchend', function(){
@@ -119,7 +119,7 @@ var interval;
 		if(scaleh >= 2){
 			scaleh = 2;
 		}
-		h.style.transform = 'scale(' + scaleh +') rotate(' + angleh + 'deg)';
+		h.style.transform = 'scale(' + scaleh +') rotate(' + angleh + 'deg) translate(' + x + 'px, ' + y + 'px)';
 	},400);
 	})
 	h.addEventListener('touchend', function(){
@@ -135,7 +135,7 @@ var interval;
 		if(scalei >= 2){
 			scalei = 2;
 		}
-		i.style.transform = 'scale(' + scalei +') skew('+20+'deg) rotate(' + anglei + 'deg)';
+		i.style.transform = 'scale(' + scalei +') skew('+20+'deg) rotate(' + anglei + 'deg) translate(' + x + 'px, ' + y + 'px)';
 	},400);
 	})
 	i.addEventListener('touchend', function(){
