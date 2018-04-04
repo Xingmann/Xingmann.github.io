@@ -8,7 +8,7 @@ var interval;
 			scalea = 2;
 		}
 		a.style.transform = 'scale(' + scalea +') rotate(' + anglea + 'deg) translate(' + x + 'px, ' + y + 'px)';
-	},400);
+	},200);
 	})
 	a.addEventListener('touchend', function(){
 		clearInterval(interval);
@@ -24,7 +24,7 @@ var interval;
 			scaleb = 2;
 		}
 		b.style.transform = 'scale(' + scaleb +') rotate(' + angleb + 'deg) translate(' + x + 'px, ' + y + 'px)';
-	},400);
+	},200);
 	})
 	b.addEventListener('touchend', function(){
 		clearInterval(interval);
@@ -40,7 +40,7 @@ var interval;
 // 			scalec = 3;
 // 		}
 // 		c.style.transform = 'scale(' + scalec +') rotate(' + anglegc + 'deg)';
-// 	},400);
+// 	},200);
 // 	})
 // 	c.addEventListener('touchend', function(){
 // 		clearInterval(interval);
@@ -56,7 +56,7 @@ var interval;
 // 			scaled = 3;
 // 		}
 // 		d.style.transform = 'scale(' + scaled +') rotate(' + angled + 'deg)';
-// 	},400);
+// 	},200);
 // 	})
 // 	d.addEventListener('touchend', function(){
 // 		clearInterval(interval);
@@ -72,7 +72,7 @@ var interval;
 			scalee = 2;
 		}
 		e.style.transform = 'scale(' + scalee +') rotate(' + anglee + 'deg) translate(' + x + 'px, ' + y + 'px)';
-	},400);
+	},200);
 	})
 	e.addEventListener('touchend', function(){
 		clearInterval(interval);
@@ -88,7 +88,7 @@ var interval;
 			scalef = 2;
 		} 
 		f.style.transform = 'scale(' + scalef +') rotate(' + anglef + 'deg) translate(' + x + 'px, ' + y + 'px)';
-	},400);
+	},200);
 	})
 	f.addEventListener('touchend', function(){
 		clearInterval(interval);
@@ -104,7 +104,7 @@ var interval;
 			scaleg = 2;
 		}
 		g.style.transform = 'scale(' + scaleg +') rotate(' + angleg + 'deg) translate(' + x + 'px, ' + y + 'px)';
-	},400);
+	},200);
 	})
 	g.addEventListener('touchend', function(){
 		clearInterval(interval);
@@ -120,7 +120,7 @@ var interval;
 			scaleh = 2;
 		}
 		h.style.transform = 'scale(' + scaleh +') rotate(' + angleh + 'deg) translate(' + x + 'px, ' + y + 'px)';
-	},400);
+	},200);
 	})
 	h.addEventListener('touchend', function(){
 		clearInterval(interval);
@@ -136,7 +136,7 @@ var interval;
 			scalei = 2;
 		}
 		i.style.transform = 'scale(' + scalei +') skew('+20+'deg) rotate(' + anglei + 'deg) translate(' + x + 'px, ' + y + 'px)';
-	},400);
+	},200);
 	})
 	i.addEventListener('touchend', function(){
 		clearInterval(interval);
