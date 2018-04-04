@@ -7,6 +7,7 @@
 	display: inline-block;
 	border:groove 25px #CD5C5C;
 	border-radius: 50%;
+	transition: transform 0.01s ease-in-out;
 }
 </style>
 </head>
@@ -46,11 +47,11 @@ var interval;
 	a.addEventListener('touchstart', function(){
 		interval = setInterval(function(){
 		scalea = scalea + 0.1;
-		if(scalea >= 2){
-			scalea = 2;
+		if(scalea >= 3){
+			scalea = 3;
 		}
 		a.style.transform = 'scale(' + scalea +') rotate(' + anglea + 'deg) translate(' + x + 'px, ' + y + 'px)';
-	},400);
+	},100);
 	})
 	a.addEventListener('touchend', function(){
 		clearInterval(interval);
