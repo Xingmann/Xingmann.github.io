@@ -1,0 +1,215 @@
+{
+	"mycollection" : 
+	[
+	{
+		"name": "ship horns",
+		"source":"https://xingmann.github.io/Assignment4/Sources/shiphorns.mp3",
+		"id" : "sun"
+	},
+
+	{
+		"name": "morning alarm",
+		"source":
+	},
+
+	{
+		"name": "seagulls",
+		"source":"https://xingmann.github.io/Assignment4/Sources/seagulls.mp3"
+	},
+
+	{
+		"name": "good morning",
+		"source":
+	},
+
+	{
+		"name": "morning reading session bell",
+		"source":"https://xingmann.github.io/Assignment4/Sources/bellrings.mp3"
+	},
+
+	{
+		"name": "air conditioner noise",
+		"source":
+	},
+
+	{
+		"name": "AC remote control",
+		"source":
+	},
+
+	{
+		"name": "children playing in kindergarten",
+		"source":
+	},
+
+	{
+		"name": "paper folding",
+		"source":
+	},
+
+	{
+		"name": "morning exercise marching music",
+		"source":
+	},
+
+	{
+		"name": "newspaper flipping",
+		"source":
+	},
+
+	{
+		"name": "dog barks",
+		"source":
+	},
+
+	{
+		"name": "cock crows",
+		"source":
+	},
+
+	{
+		"name": "shoes rubbing",
+		"source":
+	},
+
+	{
+		"name": "football kicking",
+		"source":
+	},
+
+	{
+		"name": "sea waves",
+		"source":"https://xingmann.github.io/Assignment4/Sources/waves.mp3"
+	},
+
+	{
+		"name": "frog grunts",
+		"source":
+	},
+
+	{
+		"name": "gate bell",
+		"source":
+	},
+
+	{
+		"name": "weibo refresh sound",
+		"source":
+	},
+
+	{
+		"name": "cicada",
+		"source":
+	},
+
+	{
+		"name": "badminton",
+		"source":
+	},
+
+	{
+		"name": "bike bell",
+		"source":
+	},
+
+	{
+		"name": "swimming",
+		"source":
+	},
+
+	{
+		"name": "chopping",
+		"source":
+	},
+
+	{
+		"name": "boating",
+		"source":
+	},
+
+	{
+		"name": "duck quack",
+		"source":
+	},
+
+	{
+		"name": "typhoon",
+		"source":
+	},
+
+	{
+		"name": "car door",
+		"source":
+	},
+
+	{
+		"name": "car engine",
+		"source":
+	},
+
+	{
+		"name": "car driving",
+		"source":
+	},
+
+	{
+		"name": "car interior rain sound",
+		"source":
+	},
+
+	{
+		"name": "airplane",
+		"source":
+	},
+
+	{
+		"name": "stamping",
+		"source":
+	},
+
+	{
+		"name": "the man-machine",
+		"source":
+	},
+
+	{
+		"name": "pedestrians on street",
+		"source":
+	},
+
+	{
+		"name": "pigeon",
+		"source":
+	},
+
+	{
+		"name": "sirens",
+		"source":
+	},
+
+	{
+		"name": "car horns",
+		"source":
+	},
+
+	{
+		"name": "subway noise",
+		"source":
+	},
+
+	{
+		"name": "keys bumping",
+		"source":
+	},
+
+	{
+		"name": "waking up stairs",
+		"source":
+	},
+
+	{
+		"name": "birds twittering",
+		"source":
+	}
+]
+}
