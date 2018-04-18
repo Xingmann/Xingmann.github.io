@@ -3,13 +3,12 @@
 	[
 	{
 		"name": "ship horns",
-		"source":"https://xingmann.github.io/Assignment4/Sources/shiphorns.mp3",
-		"id" : "sun"
+		"source":"https://xingmann.github.io/Assignment4/Sources/shiphorns.mp3"
 	},
 
 	{
 		"name": "morning alarm",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/Requiem.mp3"
 	},
 
 	{
@@ -19,7 +18,7 @@
 
 	{
 		"name": "good morning",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/morning.mp3"
 	},
 
 	{
@@ -28,53 +27,43 @@
 	},
 
 	{
-		"name": "air conditioner noise",
-		"source":
-	},
-
-	{
-		"name": "AC remote control",
-		"source":
+		"name": "AC",
+		"source":"https://xingmann.github.io/Assignment4/Sources/AC.mp3"
 	},
 
 	{
 		"name": "children playing in kindergarten",
-		"source":
-	},
-
-	{
-		"name": "paper folding",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/children.mp3"
 	},
 
 	{
 		"name": "morning exercise marching music",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/marchsong.mp3"
 	},
 
 	{
-		"name": "newspaper flipping",
-		"source":
+		"name": "morning exercise",
+		"source":"https://xingmann.github.io/Assignment4/Sources/calisthenics.mp3"
+	},
+
+	{
+		"name": "paper",
+		"source":"https://xingmann.github.io/Assignment4/Sources/paper.mp3"
 	},
 
 	{
 		"name": "dog barks",
-		"source":
-	},
-
-	{
-		"name": "cock crows",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/dog.mp3"
 	},
 
 	{
 		"name": "shoes rubbing",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/basketball.mp3"
 	},
 
 	{
 		"name": "football kicking",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/football.mp3"
 	},
 
 	{
@@ -83,133 +72,124 @@
 	},
 
 	{
-		"name": "frog grunts",
-		"source":
-	},
-
-	{
-		"name": "gate bell",
-		"source":
-	},
-
-	{
 		"name": "weibo refresh sound",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/weibo.mp3"
 	},
 
 	{
 		"name": "cicada",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/cicada.mp3"
 	},
 
 	{
 		"name": "badminton",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/badminton.mp3"
 	},
 
 	{
 		"name": "bike bell",
-		"source":
+		"source":"https://xingmann.github.io/Assignment4/Sources/bike.mp3"
 	},
 
 	{
 		"name": "swimming",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "chopping",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "boating",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "duck quack",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "typhoon",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "car door",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "car engine",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "car driving",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "car interior rain sound",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "airplane",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "stamping",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "the man-machine",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "pedestrians on street",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "pigeon",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "sirens",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "car horns",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "subway noise",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "keys bumping",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "waking up stairs",
-		"source":
+		"source":""
 	},
 
 	{
 		"name": "birds twittering",
-		"source":
+		"source":""
 	}
 ]
 }
+
