@@ -77,6 +77,11 @@
 	},
 
 	{
+		"name": "opening",
+		"source":"https://xingmann.github.io/Assignment4/Sources/opening.mp3"
+	},	
+
+	{
 		"name": "cicada",
 		"source":"https://xingmann.github.io/Assignment4/Sources/cicada.mp3"
 	},
@@ -93,103 +98,67 @@
 
 	{
 		"name": "swimming",
-		"source":""
+		"source":"https://xingmann.github.io/Assignment4/Sources/swimming.mp3"
 	},
 
 	{
 		"name": "chopping",
-		"source":""
+		"source":"https://xingmann.github.io/Assignment4/Sources/chopping.mp3"
 	},
 
 	{
+		"name": "frying",
+		"source":"https://xingmann.github.io/Assignment4/Sources/frying.mp3"
+	},
+
+	{
+		"name": "frog",
+		"source":"https://xingmann.github.io/Assignment4/Sources/frog.mp3"
+	},
+
+
+	{
 		"name": "boating",
-		"source":""
+		"source":"https://xingmann.github.io/Assignment4/Sources/boating.mp3"
 	},
 
 	{
 		"name": "duck quack",
-		"source":""
+		"source":"https://xingmann.github.io/Assignment4/Sources/duck.mp3"
 	},
+
+	{
+		"name": "piano",
+		"source":"https://xingmann.github.io/Assignment4/Sources/piano.mp3"
+	},
+
 
 	{
 		"name": "typhoon",
-		"source":""
+		"source":"https://xingmann.github.io/Assignment4/Sources/typhoon.mp3"
 	},
 
 	{
-		"name": "car door",
-		"source":""
+		"name": "car",
+		"source":"https://xingmann.github.io/Assignment4/Sources/car.mp3"
 	},
 
-	{
-		"name": "car engine",
-		"source":""
-	},
-
-	{
-		"name": "car driving",
-		"source":""
-	},
-
-	{
-		"name": "car interior rain sound",
-		"source":""
-	},
 
 	{
 		"name": "airplane",
-		"source":""
+		"source":"https://xingmann.github.io/Assignment4/Sources/airplane.mp3"
 	},
 
 	{
-		"name": "stamping",
-		"source":""
+		"name": "stamp",
+		"source":"https://xingmann.github.io/Assignment4/Sources/stamp.mp3"
 	},
 
 	{
-		"name": "the man-machine",
-		"source":""
-	},
-
-	{
-		"name": "pedestrians on street",
-		"source":""
-	},
-
-	{
-		"name": "pigeon",
-		"source":""
-	},
-
-	{
-		"name": "sirens",
-		"source":""
-	},
-
-	{
-		"name": "car horns",
-		"source":""
-	},
-
-	{
-		"name": "subway noise",
-		"source":""
-	},
-
-	{
-		"name": "keys bumping",
-		"source":""
-	},
-
-	{
-		"name": "waking up stairs",
-		"source":""
-	},
-
-	{
-		"name": "birds twittering",
-		"source":""
+		"name": "themanmachine",
+		"source":"https://xingmann.github.io/Assignment4/Sources/manmachine.mp3"
 	}
+
 ]
 }
 
