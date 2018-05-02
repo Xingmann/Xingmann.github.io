@@ -16,7 +16,7 @@
 	{
 		"name": "seagulls",
 		"source":"https://xingmann.github.io/Assignment4/Sources/seagulls.mp3",
-		"link":""
+		"link":"https://xingmann.github.io/Assignment4/seagulls.html"
 	},
 
 	{
@@ -54,6 +54,11 @@
 		"source":"https://xingmann.github.io/Assignment4/Sources/calisthenics.mp3",
 		"link":""
 	},
+	{
+		"name": "bird",
+		"source":"https://xingmann.github.io/Assignment4/Sources/bird.mp3",
+		"link":"https://xingmann.github.io/Assignment4/bird.html"
+	},
 
 	{
 		"name": "paper",
@@ -82,7 +87,7 @@
 	{
 		"name": "sea waves",
 		"source":"https://xingmann.github.io/Assignment4/Sources/waves.mp3",
-		"link":""
+		"link":"https://xingmann.github.io/Assignment4/seawaves.html"
 	},
 
 	{
@@ -124,7 +129,7 @@
 	{
 		"name": "chopping",
 		"source":"https://xingmann.github.io/Assignment4/Sources/chopping.mp3",
-		"link":""
+		"link":"https://xingmann.github.io/Assignment4/chopping.html"
 	},
 
 	{
@@ -143,7 +148,7 @@
 	{
 		"name": "boating",
 		"source":"https://xingmann.github.io/Assignment4/Sources/boating.mp3",
-		"link":""
+		"link":"https://xingmann.github.io/Assignment4/ripples.html"
 	},
 
 	{
