@@ -17,9 +17,26 @@ body,html{
   clip-path: circle(200px at center);
 }
 #scroll-indicator { 
-  position: absolute;
+  position: fixed;
   margin:0;
-  animation: bounce 1.3s infinite;
+  animation: bounce 1.5s infinite;
+  display:block;
+  z-index: 10;
+}
+#back{
+  width:35px;
+  height:35px;
+  background-color: white;
+  border-radius: 50%;
+  left:40px;
+  top:30px;
+  position:fixed;
+  opacity:0.6;
+  display:block;
+  z-index: 10;
+}
+#back:hover{
+  opacity:0.9;
 }
 img{
   position: absolute;
@@ -43,9 +60,9 @@ img{
   <audio autoplay loop>
     <source type="audio/mp3" src="https://xingmann.github.io/Assignment4/Sources/swimming.mp3"></source>
   </audio>
-<div id="scroll-indicator"><img src="https://airports.carmanah.com/wp-content/uploads/2017/10/white-down-arrow-png-2-300x300.png"></img></div>
-<!-- http://www.randomcontrol.com/images/global/down-arrow.png -->
 </div>
+<div id="scroll-indicator"><img src="https://airports.carmanah.com/wp-content/uploads/2017/10/white-down-arrow-png-2-300x300.png"></img></div>
+<div id="back"><a href=""></div>
 </body>
 <script>
 var frameNumber = 0,
