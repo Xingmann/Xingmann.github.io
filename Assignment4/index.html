@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+</head>
+<style>
+body{
+	background: #E5E7E9;
+	/*#fbf3d4;*/
+/*	background: linear-gradient(to bottom,rgba(0,128,0,0), rgba(0,128,0,1))*/
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  margin: 120px;
+  margin-left:680px;
+  border-radius: 50%;
+}
+.line{
+	height:7160px;
+	width:3px;
+	position: absolute;
+	left:120px;
+	top:0;
+	background: black;
+}
+.content{
+	font-size:24px;
+	font-family:'Montserrat';
+	font-weight: 500;
+	font-style:italic;
+}
+.percent{
+	font-size:18px;
+	font-family:'Montserrat';
+	font-weight:400;
+	font-style:italic;
+}
+#one{
+	position: absolute;
+	left:130px;	
+	top:800px;	
+}
+#two{
+	position: absolute;
+	left:130px;		
+	top:1600px;
+}
+#three{
+	position: absolute;
+	left:130px;	
+	top:2400px;
+}
+#four{
+	position: absolute;
+	left:130px;	
+	top:3800px;	
+}
+#five{
+	position: absolute;
+	left:130px;	
+	top:4500px;
+}
+#six{
+	position: absolute;
+	left:130px;	
+	top:5200px;
+}
+#seven{
+	position: absolute;
+	left:130px;	
+	top:6100px;	
+}
+#eight{
+	position: absolute;
+	left:130px;	
+	top:6400px;
+}
+#nine{
+	position: absolute;
+	left:130px;	
+	top:6700px;
+}
+
+#day{
+	position: absolute;
+	left:130px;
+	top:3100px;
+}
+#week{
+	position: absolute;
+	left:130px;
+	top:5800px;
+}
+#year{
+	position: absolute;
+	left:130px;
+	top:7050px;
+}
+.animated{
+	animation: fadeIn 2.5s ease-in-out 0s forwards;
+}
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+#circle-0{
+	background-color: #FFA009;
+	box-shadow: 0 0 80px #FFA009;
+}
+#circle-13{
+	background-color: #0FA009;
+}
+.circle:hover{
+	animation:swing 2s ease;
+	animation-iteration-count: 1;	
+}
+#circle-2:hover {
+	animation:jump 1s forwards;
+}
+@keyframes swing
+{
+    15%
+    {
+        transform: translateX(10px);
+    }
+    30%
+    {
+        transform: translateX(-10px);
+    }
+    50%
+    {
+        transform: translateX(6px);
+    }
+    65%
+    {
+        transform: translateX(-6px);
+    }
+    80%
+    {
+        transform: translateX(4px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+#scroll-indicator {	
+	position: fixed;
+	left: -40px;
+	top:500px;
+/*	animation: bounce 1.3s infinite;*/
+	display:block;
+	z-index: 10;
+}
+#line-d{
+	position: absolute;
+	left:260px;
+	top:3120px;
+  	height:0px;
+  	width:0px;
+  	border-bottom:1.5px dotted #000;
+  	animation: increase 6s forwards; 
+}
+#line-w{
+	position: absolute;
+	left:260px;
+	top:3120px;
+  	height:0px;
+  	width:0px;
+  	border-bottom:1.5px dotted #000;
+  	animation: increase 6s forwards; 
+}
+#line-y{
+	position: absolute;
+	left:260px;
+	top:7065px;
+  	height:0px;
+  	width:0px;
+  	border-bottom:1.5px dotted #000;
+  	animation: increase 6s forwards; 
+}
+img{
+	position: absolute;
+	left: 80px;
+	top:470px;
+	width:40px;
+	height:40px;
+	animation: bounce 1.3s infinite;
+}
+#scroll-indicator:hover{
+	opacity:0.6;
+}
+a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+@keyframes bounce {
+	 0% { top: 15%; }
+	 50%   { top: 20%; }
+	 100% { top: 15%; }
+}
+
+@keyframes jump {
+	 0% { transform: translateY(20px); }
+	 50%   { transform: translateY(-20px); }
+	 100% { transform: translateY(0px); }
+}
+@keyframes increase {
+    100% {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<div class="line"></div>
+<div class="content">
+<div id="day">One Day</div><div id="line-d"></div>
+<div id="week">One Week</div><div id="line-w"></div>
+<div id="year">One Year</div><div id="line-y"></div>
+</div>
+<div class="percent">
+<div id="one">25%</div>
+<div id="two">50%</div>
+<div id="three">75%</div>
+<div id="four">25%</div>
+<div id="five">50%</div>
+<div id="six">75%</div>
+<div id="seven">25%</div>
+<div id="eight">50%</div>
+<div id="nine">75%</div>
+</div>
+<div id="scroll-indicator"><img src="https://cdn0.iconfinder.com/data/icons/common-2/100/icon-23-512.png"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+	var url = "https://xingmann.github.io/Assignment4/List.json";
+
+	
+	function playAudio(id){
+
+		console.log(id)
+
+ 		var audio = document.getElementById(id);
+ 		audio.play();
+ 	}
+
+ 	function pauseAudio(id){
+ 		var audio = document.getElementById(id);
+ 		audio.pause();
+ 	}
+
+	$.getJSON(url, function(data){
+
+		for(var i = 0; i < data.collection.length; i = i + 1){
+
+			var circle = document.createElement("div");
+			circle.id = "circle-" + i;
+			circle.className = "circle";
+			circle.setAttribute("number", i);
+			if(i <= 13){
+			var color1 = "rgb(" +red+ ", 160,9)";
+			var red = 150 - (i-5)*20;
+			circle.style.backgroundColor = color1;
+			circle.style.boxShadow = "0 0 80px "+color1+"";
+			}
+			console.log(i)
+			console.log(color1)
+			if(i < 26, i > 12){
+			var color2 = "rgb(15, 130,"+blue+")";
+			var blue = 80 + (i-15)*20;
+			circle.style.backgroundColor = color2;
+			circle.style.boxShadow = "0 0 80px "+color2+"";
+			}
+			console.log(color2)
+			
+			if(i > 24){
+			var color3 = "rgb(15, "+green+",240)";
+			var green = 150 - (i-25)*20;
+			circle.style.backgroundColor = color3;
+			circle.style.boxShadow = "0 0 80px "+color3+"";
+			}
+			console.log(color3)
+
+			
+
+			var link = data.collection[i].link;
+			if(link.length > 0){
+				circle.innerHTML = '<a href="'+ link +'"></a>'
+			}
+
+			var h = i/2;
+			var j = Math.floor(h);
+			var m = Math.abs(i-15);
+			if(j < h){
+				circle.style.marginLeft = 740  - m*8 + 'px';
+			}
+			else{
+				
+				circle.style.marginLeft = 740  + m*8 + 'px';
+			};			
+	 		document.body.appendChild(circle);
+
+	 		var source = data.collection[i].source;
+	 		var name = data.collection[i].name;	 		
+	 		var a = document.createElement("a");
+	 		a.innerHTML = "<p>" + name + "</p>"; 
+	 		a.innerHTML = '<audio id="audio-' + i + '" loop> <source src="' + data.collection[i].source + '" type="audio/mp3"></source></audio>'
+	 		document.body.appendChild(a);
+
+	 		console.log(link)
+
+	 		var audio = "audio-" + i;
+	 	}
+
+
+	 	$(".circle").mouseover(function(){
+	 		var currentNumber = $(this).attr("number");
+	 		var audio = "audio-" + currentNumber
+	 		console.log(audio)
+	 		playAudio(audio)
+
+	 	})
+
+	 	$(".circle").mouseout(function(){
+	 		var currentNumber = $(this).attr("number");
+	 		var audio = "audio-" + currentNumber
+	 		console.log(audio)
+	 		pauseAudio(audio)
+
+	 	})
+	})
+
+window.onscroll = function(event){
+	var offset1 = document.getElementById("day","line-d").offsetTop - window.innerHeight - window.scrollY;
+	if(offset1 < 100){
+		document.getElementById("day","line-d").className += " animated";
+	}
+	var offset2 = document.getElementById("week").offsetTop - window.innerHeight - window.scrollY;
+	if(offset2 < 100){
+		document.getElementById("week").className += " animated";
+	}
+	var offset3 = document.getElementById("year").offsetTop - window.innerHeight - window.scrollY;
+	if(offset3 < 100){
+		document.getElementById("year").className += " animated";
+	}
+	var offset4 = document.getElementById("one").offsetTop - window.innerHeight - window.scrollY;
+	if(offset4 < 100){
+		document.getElementById("one").className += " animated";
+	}
+	var offset5 = document.getElementById("two").offsetTop - window.innerHeight - window.scrollY;
+	if(offset5 < 100){
+		document.getElementById("two").className += " animated";
+	}
+	var offset6 = document.getElementById("three").offsetTop - window.innerHeight - window.scrollY;
+	if(offset6 < 100){
+		document.getElementById("three").className += " animated";
+	}
+	var offset7 = document.getElementById("four").offsetTop - window.innerHeight - window.scrollY;
+	if(offset7 < 100){
+		document.getElementById("four").className += " animated";
+	}
+	var offset8 = document.getElementById("five").offsetTop - window.innerHeight - window.scrollY;
+	if(offset8 < 100){
+		document.getElementById("five").className += " animated";
+	}
+	var offset9 = document.getElementById("six").offsetTop - window.innerHeight - window.scrollY;
+	if(offset9 < 100){
+		document.getElementById("six").className += " animated";
+	}
+	var offset10 = document.getElementById("seven").offsetTop - window.innerHeight - window.scrollY;
+	if(offset10 < 100){
+		document.getElementById("seven").className += " animated";
+	}
+	var offset11 = document.getElementById("eight").offsetTop - window.innerHeight - window.scrollY;
+	if(offset11 < 100){
+		document.getElementById("eight").className += " animated";
+	}
+	var offset12 = document.getElementById("nine").offsetTop - window.innerHeight - window.scrollY;
+	if(offset12 < 100){
+		document.getElementById("nine").className += " animated";
+	}
+
+}
+
+$(document).ready(function() {
+    $("#scroll-indicator").click(function(event){
+        $('html, body').animate({scrollTop: '+=150px'}, 800);
+    });
+});
+
+</script>
+</body>
+</html>
