@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
 </head>
@@ -19,7 +20,7 @@ body{
 }
 .line{
 	height:7160px;
-	width:3px;
+	width:2px;
 	position: absolute;
 	left:120px;
 	top:0;
@@ -124,6 +125,22 @@ body{
 #circle-2:hover {
 	animation:jump 1s forwards;
 }
+#circle-9:hover{
+	animation:jump 1s forwards;
+}
+#circle-14:hover{
+	animation:jump 1s forwards;
+}
+#circle-20:hover{
+	animation:jump 1s forwards;
+}
+#circle-21:hover{
+	animation:jump 1s forwards;
+}
+#circle-24:hover{
+	animation:jump 1s forwards;
+}
+
 @keyframes swing
 {
     15%
@@ -155,9 +172,16 @@ body{
 	position: fixed;
 	left: -40px;
 	top:500px;
-/*	animation: bounce 1.3s infinite;*/
 	display:block;
 	z-index: 10;
+}
+img{
+	position: fixed;
+	left:35px;
+	top:470px;
+	width:55px;
+	height:55px;
+	display:block;
 }
 #line-d{
 	position: absolute;
@@ -166,16 +190,19 @@ body{
   	height:0px;
   	width:0px;
   	border-bottom:1.5px dotted #000;
-  	animation: increase 6s forwards; 
 }
+
+.animatedline{
+	animation: increase 6s forwards; 
+}
+
 #line-w{
 	position: absolute;
-	left:260px;
-	top:3120px;
+	left:270px;
+	top:5815px;
   	height:0px;
   	width:0px;
   	border-bottom:1.5px dotted #000;
-  	animation: increase 6s forwards; 
 }
 #line-y{
 	position: absolute;
@@ -184,16 +211,8 @@ body{
   	height:0px;
   	width:0px;
   	border-bottom:1.5px dotted #000;
-  	animation: increase 6s forwards; 
 }
-img{
-	position: absolute;
-	left: 80px;
-	top:470px;
-	width:40px;
-	height:40px;
-	animation: bounce 1.3s infinite;
-}
+
 #scroll-indicator:hover{
 	opacity:0.6;
 }
@@ -292,8 +311,6 @@ a{
 			}
 			console.log(color3)
 
-			
-
 			var link = data.collection[i].link;
 			if(link.length > 0){
 				circle.innerHTML = '<a href="'+ link +'"></a>'
@@ -342,17 +359,32 @@ a{
 	})
 
 window.onscroll = function(event){
-	var offset1 = document.getElementById("day","line-d").offsetTop - window.innerHeight - window.scrollY;
+	var offset1 = document.getElementById("day").offsetTop - window.innerHeight - window.scrollY;
 	if(offset1 < 100){
-		document.getElementById("day","line-d").className += " animated";
+		document.getElementById("day").className += " animated";
+	}
+	var offsetline1 = document.getElementById("line-d").offsetTop - window.innerHeight - window.scrollY;
+	if(offsetline1 < 100){
+
+		document.getElementById("line-d").className += " animatedline";
 	}
 	var offset2 = document.getElementById("week").offsetTop - window.innerHeight - window.scrollY;
 	if(offset2 < 100){
 		document.getElementById("week").className += " animated";
 	}
+	var offsetline2 = document.getElementById("line-w").offsetTop - window.innerHeight - window.scrollY;
+	if(offsetline2 < 100){
+
+		document.getElementById("line-w").className += " animatedline";
+	}
 	var offset3 = document.getElementById("year").offsetTop - window.innerHeight - window.scrollY;
 	if(offset3 < 100){
 		document.getElementById("year").className += " animated";
+	}
+	var offsetline3 = document.getElementById("line-y").offsetTop - window.innerHeight - window.scrollY;
+	if(offsetline3 < 100){
+
+		document.getElementById("line-y").className += " animatedline";
 	}
 	var offset4 = document.getElementById("one").offsetTop - window.innerHeight - window.scrollY;
 	if(offset4 < 100){
@@ -397,6 +429,12 @@ $(document).ready(function() {
     $("#scroll-indicator").click(function(event){
         $('html, body').animate({scrollTop: '+=150px'}, 800);
     });
+
+    var hash = location.hash;
+	if(hash.length > 0){
+		hash = hash.replace("#", "");
+		document.getElementById(hash).scrollIntoView();
+	}
 });
 
 </script>
