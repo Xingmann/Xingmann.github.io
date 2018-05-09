@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, minimum-scale=0.4, maximum-scale=0.4, user-scalable=no">
+<!-- <meta name="viewport" content="width=device-width, minimum-scale=0.4, maximum-scale=0.4, user-scalable=no"> -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
 </head>
 <style>
-@media (min-width:480px){
-	body{width:50%;}
-}
-@media only screen and (-webkit-device-pixel-ratio: 1.5) {
-  /* CSS for High-density screens goes here *
-   * Ex: Samsung Galaxy SII, HTC Nexus One, HTC Evo 3D */
-}
+
 
 body{
 	background: #E5E7E9;
@@ -246,6 +240,10 @@ a{
         width: 100%;
     }
 }
+@media (hover:none){
+	body{width:40%;height:180%;}
+}
+
 </style>
 </head>
 <body>
@@ -267,6 +265,7 @@ a{
 <div id="nine">75%</div>
 </div>
 <div id="scroll-indicator"><img src="https://cdn0.iconfinder.com/data/icons/common-2/100/icon-23-512.png"></div>
+<div id="group"></div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
@@ -333,8 +332,9 @@ a{
 			else{
 				
 				circle.style.marginLeft = 740  + m*8 + 'px';
-			};			
-	 		document.body.appendChild(circle);
+			};	
+			var g = document.getElementById("group");		
+	 		g.appendChild(circle);
 
 	 		var source = data.collection[i].source;
 	 		var name = data.collection[i].name;	 		
