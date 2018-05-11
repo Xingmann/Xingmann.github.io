@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- <meta name="viewport" content="width=device-width, minimum-scale=0.4, maximum-scale=0.4, user-scalable=no"> -->
+<meta name="viewport" content="width=device-width, minimum-scale=0.4, maximum-scale=0.4, user-scalable=no">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i" rel="stylesheet">
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+
 </head>
 <style>
-
 
 body{
 	background: #E5E7E9;
@@ -180,7 +179,7 @@ body{
 img{
 	position: fixed;
 	left:35px;
-	top:470px;
+	top:500px;
 	width:55px;
 	height:55px;
 	display:block;
@@ -241,10 +240,19 @@ a{
     }
 }
 @media (hover:none){
-	body{width:40%;height:180%;}
-}
 
+	#scroll-indicator > img{
+		width: 70px;
+		height:70px;
+		left:27px;
+		top:900px;
+	}
+
+}
 </style>
+
+<link rel="stylesheet" href="file:///Users/xingman/Spring2018/Xingmann.github.io/Assignment4/media.css">
+
 </head>
 <body>
 <div class="line"></div>
@@ -268,7 +276,29 @@ a{
 <div id="group"></div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/interactjs@1.3.3/dist/interact.min.js"></script>
 <script>
+
+
+
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+
+		interact(".circle")
+		.on('hold',function(){
+			var circle = document.getElementsByClassName("circle")
+	 		var currentNumber = $(this).attr("number");
+	 		var audio = "audio-" + currentNumber
+	 		circle.style.animation = "swing 2s forwards";
+	 		console.log(audio)
+	 		playAudio(audio)
+
+	 	}) 	
+	
+	}
+
+
+
+
 
 	var url = "https://xingmann.github.io/Assignment4/List.json";
 
@@ -327,11 +357,11 @@ a{
 			var j = Math.floor(h);
 			var m = Math.abs(i-15);
 			if(j < h){
-				circle.style.marginLeft = 740  - m*8 + 'px';
+				circle.style.marginLeft = 600  - m*8 + 'px';
 			}
 			else{
 				
-				circle.style.marginLeft = 740  + m*8 + 'px';
+				circle.style.marginLeft = 600  + m*8 + 'px';
 			};	
 			var g = document.getElementById("group");		
 	 		g.appendChild(circle);
