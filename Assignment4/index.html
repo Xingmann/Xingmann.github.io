@@ -278,7 +278,7 @@ a{
 
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
 			
-			$(".circle").click(function(){
+			$(".circle").onclick(function(){
 	 		var currentNumber = $(this).attr("number");
 	 		var audio = "audio-" + currentNumber
 	 		console.log(audio)
