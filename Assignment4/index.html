@@ -277,14 +277,14 @@ a{
 	var url = "https://xingmann.github.io/Assignment4/List.json";
 
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+			
+			$(".circle").click(function(){
+	 		var currentNumber = $(this).attr("number");
+	 		var audio = "audio-" + currentNumber
+	 		console.log(audio)
+	 		playAudio(audio)
 
-		$(".circle").click(function() {
-  		player = document.getElementById(id);
-  		$( this ).slideUp();
-  		player.play(); // Play the empty element to get control
-  		player.src = link; // Set the real audio source
-  		// beeper = setInterval(function() { player.play(); } ,1000 * 60);
-		});
+	 	})
 	
 	}
 
