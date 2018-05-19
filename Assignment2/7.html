@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+<style>
+	html,body{
+		background-color: black;
+		margin:0;
+	}
+	.title{
+		font-family:'Bellefair', serif;
+		top:120%;
+		left:46%;
+		position: absolute;
+		color:white;
+		font-size:36px;
+		text-align: center;
+		opacity: 0;
+		animation: fadeIn 3s ease-in-out 2s forwards;
+		animation-delay: 2s
+	}
+ 	a{
+	text-decoration: none;
+	color:white;
+	}
+
+	#content{
+		text-align: center;
+		color:white;
+		font-weight: lighter;
+		padding:20% 30% 30% 30%;
+	}
+
+	img{width:100%;
+		height:auto;
+		opacity: 0;
+		animation:fadeIn 1s ease-in-out 1s forwards;
+	}
+
+
+	.shrink:hover{
+		transform: scale(0.7);
+	}
+	.shrink{
+		font-size: 200%;
+		animation-duration: 3s;
+	}
+
+	.fade:hover{
+		opacity: 0.2;
+	}
+
+	p{
+		opacity: 0;
+	}
+	#p2{
+		animation-delay: 4s;
+	}
+	
+	#line-text{
+		opacity:0;
+		animation-delay: 8s;
+	}
+
+	.animated-p{
+		animation: fadeInUp 3s ease-in-out 0s forwards;
+	}
+
+	span{
+		display:inline-block;
+	}
+
+
+	@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+</style>
+</head>
+<body>
+	<center>
+	<div><img src="file:///Users/xingman/Spring2018/STudio/Assignment2/Photos/(6)knot.png"></div>
+	<div class="title">The Knot<br><div class="fade" ><a href="#content">◒</a></div></div>
+	<div id="content">
+		<p id="p1">The knot lies silently in the dark corridor where no one walks along. When I am thinking in this way, many dear old memories gradually return to my mind. There must be a knot that connects me and myself. I’m sure someday I will meet myself in the strange distant world.
+		</p>
+		<br>
+		<p id="p2">And I wish it was a warm place. And if there was some cold beer, I would have nothing to complain. In the world I am myself and myself is me. The subject is the object and the object is the subject. There is no opening of any kind between the two. They are closely stuck together. Such a strange place must exist somewhere in the world.
+		</p>
+		<br><br><br><br><br><br>
+		<div id="line-text">
+			<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/final.html">
+			<span class="shrink">
+			◕
+			</span>
+			</a>
+		</div>
+
+	</div>
+
+<script>
+window.onscroll = function(event){
+	var offset = document.getElementById("p1").offsetTop - window.innerHeight - window.scrollY;
+	// console.log(offset);
+	if(offset < 100){
+		document.getElementById("p1").className += " animated-p";
+		document.getElementById("p2").className += " animated-p";
+		document.getElementById("line-text").className += " animated-p";
+	}
+}
+</script>
+
+</body>
+</html>

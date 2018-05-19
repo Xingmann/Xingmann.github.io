@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+	html,body{
+	background-color: black;
+    font-weight: lighter;
+	font-size:24px;
+	line-height: 300%;
+	padding-top:10%;
+	}
+	a{
+	text-decoration: none;
+	color:white;
+	}
+
+	@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+
+	.l1,.l2,.l3,.l4,.l5,.l6,.l7{
+  position: absolute;
+  top:40%;
+  left:36%;
+  opacity: 0;
+  color:white;
+  animation-name: fadeInOut;
+  animation-duration: 3.5s;
+
+	}
+	.l1{
+  animation-delay: 1s;
+	}
+	.l2{
+  animation-delay: 4.5s;
+	}
+	.l3{
+  animation-delay: 8s;	
+	}
+	.l4{
+  animation-delay: 11.5s;	
+	}
+	.l5{
+  animation-delay: 15s;	
+	}
+	.l6{
+  animation-delay: 18.5s;	
+	}
+	.l7{
+  	animation: fadeIn 3.5s forwards;
+	animation-delay: 23s;
+	}
+	
+	.grow:hover {
+		transform: scale(1.5);
+	}
+
+	span{
+		display:inline-block;
+	}
+
+</style>
+</head>
+<body>
+	<center>
+	<div class="l1">"Tall and tan and young and lovely"</div>
+	<div class="l2">"The girl from Ipanema goes walking"</div>
+	<div class="l3">"When she walks, she’s like a samba"</div>
+	<div class="l4">"That swings so cool and sways so gentle"</div>
+	<div class="l5">"But each day, when she walks to the sea"</div>
+	<div class="l6">"She looks straight ahead, not at me"</div>
+	<div class="l7">
+		<span class="grow">
+			<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/2.html">■</a></span>&nbsp;watched the sea in this way.
+	</div>
+
+</body>
+</html>

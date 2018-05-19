@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+<style>
+	html,body{
+		background-color: black;
+		margin:0;
+	}
+	.title{
+		font-family:'Bellefair', serif;;
+		top:80%;
+		left:35%;
+		position: absolute;
+		color:white;
+		font-size:36px;
+		text-align: center;
+		opacity: 0;
+		animation: fadeIn 3s ease-in-out 2s forwards;
+		animation-delay: 2s
+	}
+ 	a{
+	text-decoration: none;
+	color:white;
+	}
+
+	#content{
+		text-align: center;
+		color:white;
+		font-weight: lighter;
+		padding:20% 30% 30% 30%;
+	}
+
+	img{width:100%;
+		height:auto;
+		opacity: 0;
+		animation:fadeIn 1s ease-in-out 1s forwards;
+	}
+
+	.grow:hover {
+		transform:scale(1.5);
+	}
+	.swing:hover{
+		animation:swing 2s ease;
+		animation-iteration-count: 1;
+	}
+
+	p{
+		opacity: 0;
+	}
+	#p2{
+		animation-delay: 3s;
+	}
+	#p3{
+		animation-delay: 6s;
+	}
+	#line-text{
+		opacity:0;
+		animation:fadeInUp 4s forwards;
+		animation-delay: 12s;
+	}
+
+	.animated-p{
+		animation: fadeInUp 2s ease-in-out 0s forwards;
+	}
+
+	span{
+		display:inline-block;
+	}
+
+
+	@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes swing
+{
+    15%
+    {
+        transform: translateX(5px);
+    }
+    30%
+    {
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        transform: translateX(3px);
+    }
+    65%
+    {
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        transform: translateX(2px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+	/*.label:after{
+		content:'The Girl From Ipanema In 1963';
+	}
+	.label:hover:after{
+		content:'Square';
+	}*/
+</style>
+</head>
+<body>
+	<center>
+	<div><img src="file:///Users/xingman/Spring2018/STudio/Assignment2/Photos/(1)1963.png"></div>
+	<div class="title">The Girl From Ipanema In 1963<br><div class="grow" ><a href="#content">■</a></div></div>
+	<div id="content">
+		<p id="p1">She has not got older since then. She is confined in an image and floating in the sea of time. If she had become older, she would now be almost forty years old.</p>
+		<br>
+		<p id="p2">Of course it’s possible that she is not so old, but she might not be so slender and so tanned as she used to be. She might have three children. Sunburn is not good for the skin. She might still be called a beauty, but not so youthful as she was twenty years ago.</p>
+		<br>
+		<p id="p3">But in the song she does not get old. She is always an eighteen-years-old cool and kind Ipanema girl on the velvety sound of Stan Getz’ tenor saxophone. As soon as I put on the record on the turntable and drop the stylus on the record, she appears.</p>
+		<br><br><br><br><br><br>
+		<div id="line-text">
+			Every time I listen to this song, I remember
+			<span class="swing">
+				<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/3.html">●</a>
+			</span>
+		</div>
+
+	</div>
+
+<script>
+window.onscroll = function(event){
+	var offset = document.getElementById("p1").offsetTop - window.innerHeight - window.scrollY;
+	// console.log(offset);
+	if(offset < 100){
+		document.getElementById("p1").className += " animated-p";
+		document.getElementById("p2").className += " animated-p";
+		document.getElementById("p3").className += " animated-p";
+		document.getElementById("line-text").className += " animated-p";
+	}
+}
+</script>
+
+</body>
+</html>

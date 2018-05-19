@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+<style>
+html,body {
+  background-color: black;
+  font-family:'Bellefair', serif;
+  font-size: 140%;
+  color:white;
+}
+
+.s1,.s2,.s3,.s4,.s5,.s6,.text{
+ opacity: 0;
+ animation: fadeIn 3.5s forwards;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+/*#container {
+  margin-top: 20px;
+  margin-left:320px;
+  position: absolute;
+  width: 700px;
+  height: 700px;
+   border: solid black 1px;
+   animation: colors 4s infinite;
+}
+
+#halfclip {
+  width: 50%;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+   overflow: hidden;
+   transform-origin: left center;
+   animation: cliprotate 8s steps(2) infinite;
+}
+
+.halfcircle {
+  box-sizing: border-box;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  border: solid 5px transparent;
+   border-top-color: white;
+   border-left-color: white;
+   border-radius: 50%;
+}
+#clipped {
+  width: 200%;
+   animation: rotate 10s linear infinite;
+}
+#fixed {
+  width: 100%;
+    transform: rotate(135deg);  
+   animation: showfixed 8s steps(2) infinite;
+}
+
+
+@keyframes cliprotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
+
+@keyframes rotate {
+  0% {transform: rotate(-45deg);}
+  100% {transform: rotate(135deg);}
+}
+
+@keyframes showfixed {
+  0% {opacity: 0;}
+  49.9% {opacity: 0;}
+  50% {opacity: 1;}
+ 100% {opacity: 1;}
+}*/
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+.s1{
+  position: absolute;
+  top:10%;
+  left:65%;
+  margin-right: 15%;
+  animation-delay: 1s;
+}
+.s1:after{
+  content:'■';
+}
+.s1:hover:after{
+  content:'The Girl From Ipanema In 1963';
+}
+
+.s2{
+  position: absolute;
+  top:50%;
+  left:80%;
+  animation-delay: 3s;
+  margin-right: 10%;
+}
+.s2:after{
+  content:'●';
+}
+.s2:hover:after{
+  content:'Highschool Corridor';
+}
+
+.s3{
+  position: absolute;
+  top:90%;
+  left:65%;
+  animation-delay: 5s;
+}
+.s3:after{
+  content:'▲';
+}
+.s3:hover:after{
+  content:'Salad';
+}
+
+.s4{
+  position: absolute;
+  top:90%;
+  left:35%;
+  animation-delay: 7s;
+}
+.s4:after{
+  content:'◆';
+}
+.s4:hover:after{
+  content:'Vegetarian Girl';
+}
+
+.s5{
+  position: absolute;
+  top:50%;
+  left:20%;
+  margin-right: 60%;
+  animation-delay: 9s;
+}
+.s5:after{
+  content:'▬';
+}
+.s5:hover:after{
+  content:'The Girl From Ipanema In 1982';
+}
+
+.s6{
+  position: absolute;
+  top:10%;
+  left:35%;
+  animation-delay: 11s;
+}
+.s6:after{
+  content:'◒';
+}
+.s6:hover:after{
+  content:'The Knot';
+}
+
+.text{
+  position: absolute;
+  top:50%;
+  left:40%;
+  font-family: Consolas;
+  font-weight: lighter;
+  font-size: 48%;
+  margin-right: 35%;
+  text-align: center;
+  animation-delay: 12.5s;
+}
+
+
+</style>
+</head>
+<body>
+<center>
+<!-- <div id="container">
+    <div id="halfclip">
+        <div class="halfcircle" id="clipped">
+        </div>
+    </div>
+    <div class="halfcircle" id="fixed">
+    </div>
+</div> -->
+<!-- <div class="content"> -->
+<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/2.html"><div class="s1"></div></a>
+<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/3.html"><div class="s2"></div></a>
+<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/4.html"><div class="s3"></div></a>
+<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/5.html"><div class="s4"></div></a>
+<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/6.html"><div class="s5"></div></a>
+<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/7.html"><div class="s6"></div></a>
+<div class="text">The Girl from Ipanema in 1963/1982 is still walking on the hot sand beach.<br>Until the last one of the records is worn out, she keeps on walking without any break.</div>
+<!-- </div> -->
+</body>
+</html>

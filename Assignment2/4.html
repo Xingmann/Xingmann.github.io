@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+<style>
+	html,body{
+		background-color: black;
+		margin:0;
+	}
+	.title{
+		font-family:'Bellefair', serif;;
+		top:80%;
+		left:48%;
+		position: absolute;
+		position: absolute;
+		color:white;
+		font-size:36px;
+		text-align: center;
+		opacity: 0;
+		animation: fadeIn 3s ease-in-out 2s forwards;
+		animation-delay: 2s
+	}
+ 	a{
+	text-decoration: none;
+	color:white;
+	}
+
+	#content{
+		text-align: center;
+		color:white;
+		font-weight: lighter;
+		padding:20% 30% 30% 30%;
+	}
+
+	img{width:100%;
+		height:auto;
+		opacity: 0;
+		animation:fadeIn 1s ease-in-out 1s forwards;
+	}
+
+
+	.rotate:hover{
+		transform: rotateZ(-180deg);
+	}
+
+
+
+	.spin:hover{
+		transform: rotateZ(220deg);
+	}
+
+	p{
+		opacity: 0;
+	}
+	#p2{
+		animation-delay: 3s;
+	}
+	
+	#line-text{
+		opacity:0;
+		animation-delay: 6s;
+	}
+
+	.animated-p{
+		animation: fadeInUp 2s ease-in-out 0s forwards;
+	}
+
+	span{
+		display:inline-block;
+	}
+
+
+	@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+</style>
+</head>
+<body>
+	<center>
+	<div><img src="file:///Users/xingman/Spring2018/STudio/Assignment2/Photos/(3)salad.png"></div>
+	<div class="title">Salad<br><div class="rotate" ><a href="#content">▲</a></div></div>
+	<div id="content">
+		<p id="p1">Consisting of lettuce, tomato, cucumber, greenpepper, asparagus, onion, and pink Thousand Island dressing. Of course there’s no salad shop at the end of the corridor. At the end of the corridor is a door and outside is an ordinary 25 meter swimming pool.
+		</p>
+		<br>
+		<p id="p2">Why the corridor reminds me of the salad, I don’t know. There’s no cause and effect here, either. The two connected in my mind by some accident or other. Just like an unlucky lady who sat on a freshly painted bench.
+		</p>
+		<br><br><br><br><br><br>
+		<div id="line-text">
+			The salad reminds me of a
+			<span class="spin">
+				<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/5.html">◆</a>
+			</span>
+			I used to know.
+		</div>
+
+	</div>
+
+<script>
+window.onscroll = function(event){
+	var offset = document.getElementById("p1").offsetTop - window.innerHeight - window.scrollY;
+	// console.log(offset);
+	if(offset < 100){
+		document.getElementById("p1").className += " animated-p";
+		document.getElementById("p2").className += " animated-p";
+		document.getElementById("line-text").className += " animated-p";
+	}
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+<style>
+	html,body{
+		background-color: black;
+		margin:0;
+	}
+	.title{
+		font-family:'Bellefair', serif;;
+		top: 90%;
+		left: 40%;
+		position: absolute;
+		color:white;
+		font-size:36px;
+		text-align: center;
+		opacity: 0;
+		animation: fadeIn 3s ease-in-out 2s forwards;
+		animation-delay: 2s
+	}
+ 	a{
+	text-decoration: none;
+	color:white;
+	}
+
+	#content{
+		text-align: center;
+		color:white;
+		font-weight: lighter;
+		padding:20% 30% 30% 30%;
+	}
+
+	img{width:100%;
+		height:auto;
+		opacity: 0;
+		animation:fadeIn 1s ease-in-out 1s forwards;
+	}
+
+	.swing:hover{
+		animation:swing 2s ease;
+		animation-iteration-count: 1;
+	}
+
+	.rotate:hover{
+		transform: rotateZ(-180deg);
+	}
+
+	p{
+		opacity: 0;
+	}
+	#p2{
+		animation-delay: 3s;
+	}
+	
+	#line-text{
+		opacity:0;
+		/*animation:fadeInUp 4s forwards;*/
+		animation-delay: 6s;
+	}
+
+	.animated-p{
+		animation: fadeInUp 2s ease-in-out 0s forwards;
+	}
+
+	span{
+		display:inline-block;
+	}
+
+
+	@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes swing
+{
+    15%
+    {
+        transform: translateX(5px);
+    }
+    30%
+    {
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        transform: translateX(3px);
+    }
+    65%
+    {
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        transform: translateX(2px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+
+</style>
+</head>
+<body>
+	<center>
+	<div><img src="file:///Users/xingman/Spring2018/STudio/Assignment2/Photos/(2)corridor.png"></div>
+	<div class="title">Highschool Corridor<br><div class="swing" ><a href="#content">●</a></div></div>
+	<div id="content">
+		<p id="p1">The dark and a little damp high school corridor. The ceiling is high and when I walk on the concrete floor, the sound of my steps echoed. There are some windows on the northside wall, but little sunlight comes in because the building is just at the foot of a steep hill. It is always still in the corridor, at least in my memory.
+		</p>
+		<br>
+		<p id="p2">Why I remember the corridor every time I hear “The Girl From Ipanema”, I don’t know. There’s no cause and effect. What kind of pebble did the Girl from Ipanema 1963 dropped into my well of consciousness?
+		</p>
+		<br><br><br><br><br><br>
+		<div id="line-text">
+			And the corridor of the highschool building reminds me of a
+			<span class="rotate">
+				<a href="file:///Users/xingman/Spring2018/STudio/Assignment2/4.html">▲</a>
+			</span>
+		</div>
+
+	</div>
+
+<script>
+window.onscroll = function(event){
+	var offset = document.getElementById("p1").offsetTop - window.innerHeight - window.scrollY;
+	// console.log(offset);
+	if(offset < 100){
+		document.getElementById("p1").className += " animated-p";
+		document.getElementById("p2").className += " animated-p";
+		document.getElementById("line-text").className += " animated-p";
+	}
+}
+</script>
+
+</body>
+</html>
