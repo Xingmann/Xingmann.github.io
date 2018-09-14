@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		html,body{
+			margin:0;
+		}
+		div{
+			width:120px;
+			height:120px;
+			background-image:url(https://xingmann.github.io/Fall18/pattern-4.svg);	
+			float:left;
+			margin:-9px;
+			transition: 1s ease-in-out;
+		}
+/*		div:hover{
+			transform: rotate(90deg);
+		}*/
+
+	</style>
+</head>
+<body>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	for(var i = 0;i < 120;i = i+1){
+
+		var d = document.createElement('div');
+
+		document.body.appendChild(d);
+
+		// d.id = 'pattern-' + i;
+		d.style.transform ='rotate('+ 10*i +'deg)';
+
+  		$("div").hover(function(){
+		   $(this).css('transform','rotate(90deg)');
+		});
+
+
+		
+
+		
+
+		
+
+	}
+
+	</script>
+</body>
+</html>
