@@ -11,14 +11,10 @@
 <body>
 <div id="body">orientation</div>
 <script>
-
-	function handleOrientation(event) {
-  		var x = DeviceOrientationEvent.beta;  // In degree in the range [-180,180]
-  		var y = DeviceOrientationEvent.gamma; // In degree in the range [-90,90]
-  		var d = document.getElementById('body')
-  		d.innerHTML  = "beta : " + x + "\n";
-  		d.innerHTML += "gamma: " + y + "\n";
-  	}
+	var x = DeviceAcceleration.x;
+	if( x < 0 ){
+		document.getElementById('body').style.backgroundColor =  blue;
+	}
 </script>
 </body>
 </html>
