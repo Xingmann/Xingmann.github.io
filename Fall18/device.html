@@ -11,9 +11,9 @@
 <body>
 <div id="body">orientation</div>
 <script>
-	var x = DeviceAcceleration.x;
+	var x = event.accelerationIncludingGravity.x;
 	if( x < 0 ){
-		document.getElementById('body').style.backgroundColor =  blue;
+		document.getElementById('body').style.backgroundColor = blue;
 	}
 </script>
 </body>
