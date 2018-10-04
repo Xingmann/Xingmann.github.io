@@ -4,28 +4,30 @@
 	<title></title>
 	<style>
 		#box{
-			width:200px;
-			height:200px;
+			width:300px;
+			height:300px;
+			background-color:black;
 		}
 	</style>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 <div id="box"></div>
 <script>
 	$(window).on("orientationchange",function(){
 		if(window.orientation == 0){
-			$('#box').css('background-color': 'yellow')
+			$('#box').css({'background-color': 'yellow'});
 		}
 		if(window.orientation == 90){
-			$('#box').css('background-color': 'blue')
+			$('#box').css({'background-color': 'blue'});
 		}
 		if(window.orientation == 180){
-			$('#box').css('background-color': 'green')
+			$('#box').css({'background-color': 'green'});
 		}
 		if(window.orientation == -90){
-			$('#box').css('background-color': 'red')
+			$('#box').css({'background-color': 'red'});
 		}
-	}
+	});
 
 </script>
 </body>
