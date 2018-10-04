@@ -3,18 +3,36 @@
 <head>
 	<title></title>
 	<style>
-		div{
-			background-color: red;
+		#box{
+			width:200px;
+			height:200px;
 		}
 	</style>
 </head>
 <body>
-<div id="body">orientation</div>
+<div id="box"></div>
 <script>
-	var x = event.accelerationIncludingGravity.x;
-	if( x < 0 ){
-		document.getElementById('body').style.backgroundColor = blue;
+	$(window).on("orientationchange",function(){
+		if(window.orientation == 0){
+			$('#box').css('background-color': 'yellow')
+		}
+		if(window.orientation == 90){
+			$('#box').css('background-color': 'blue')
+		}
+		if(window.orientation == 180){
+			$('#box').css('background-color': 'green')
+		}
+		if(window.orientation == -90){
+			$('#box').css('background-color': 'red')
+		}
 	}
+
 </script>
 </body>
 </html>
+	window.addEventListener('deviceorientation', function(event) {
+  	console.log(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
+	});
+	var b = document.getElementById('box');
+	var alpha = instanceOfDeviceOrientationEvent.alpha;
+	b.innerHTML = event.alpha;
