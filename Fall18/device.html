@@ -49,7 +49,9 @@
 			transition: 0.5s ease-in-out;
 		}
 	</style>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 	<script src="https://unpkg.com/interactjs@1.3.3/dist/interact.min.js"></script>
 </head>
 <body>
@@ -89,17 +91,13 @@
 		document.getElementById('container-' + i).appendChild(b);		
 
 
-  // 		$('.circleA').click(function(){
-		//    $(this).css('opacity','0.5');
-		// });
-
-  // 		$('.circleB').click(function(){
-		//    $(this).css('opacity','0.1');
-		// });
-		var a = document.querySelector('.containers');
-		interact('.containers').on('tap',function (event) {
- 		a.style.transform = "rotate(90deg)";
- 		});
+		$('.containers').on('tap', function(){
+		$(this).hide();
+		});
+		// var a = document.querySelector('.containers');
+		// interact('.containers').on('tap',function (event) {
+ 	// 	a.style.transform = "rotate(90deg)";
+ 	// 	});
 
 
 	}
