@@ -9,22 +9,22 @@
 	}
 </style>	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
-
-<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script> -->
+	<script src="https://unpkg.com/interactjs@1.3.3/dist/interact.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
 </head>
 <body>
 <div id="box"></div>
 <script type="text/javascript">
-	$('#box').on('tap', function(){
-		$(this).hide();
-	});
+	
+	// $('#box').on('tap', function(){
+		// $(this).hide();
+	// });
 	
 
-	// var a = document.querySelector('#box');
-	// interact('#box').on('tap',function (event) {
- // 	a.style.backgroundColor = "yellow";
- 	// });
+	var a = document.querySelector('#box');
+	interact('#box').on('tap',function (event) {
+ 	a.style.backgroundColor = "yellow";
+ 	});
 </script>
 </body>
 </html>
