@@ -108,15 +108,18 @@
 		$(window).on("orientationchange",function(){
 		if(window.orientation == 0){
 			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-2.svg)'});
-			$('body').css({'width':'400px'});
+			$('body').css({'width':'400px'},{'margin':'35px'});
+			$('div').css({'margin':'-5px -5.5px -5px -5.5px'});
 		}
 		if(window.orientation == 90){
 			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-3.svg)'});
 			$('body').css({'width':'700px'});
+			$('div').css({'margin':'-4.5px'});
 		}
 		if(window.orientation == -90){
 			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-4.svg)'});
 			$('body').css({'width':'700px'});
+			$('div').css({'margin':'-4px -4.5px -5px -5px'});
 		}
 	});
 
