@@ -14,6 +14,13 @@
 <body>
 <div id="box"></div>
 <script type="text/javascript">
+
+		$('#box').on("tap",function(){
+   		$(this).css('background-color':'yellow');
+		});
+</script>
+</body>
+</html>
 	function draw() {
   	shakeChangeBackground();
 	}
@@ -30,9 +37,3 @@
 	    $('#box').css({'background-color':'yellow'});
 	  }
 	}
-		$('#box').on("tap",function(){
-   		$(this).css('transform','rotate(90deg)');
-		});
-</script>
-</body>
-</html>
