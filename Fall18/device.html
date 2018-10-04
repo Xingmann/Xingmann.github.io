@@ -11,7 +11,7 @@
 			float:left;	
 			margin:40px;
 			padding:0;
-			width:450px;	
+			width:400px;	
 		}
 		div{
 			margin:-4px -4.5px -5px -5px;
@@ -55,7 +55,7 @@
 <body>
 
 	<script>
-	for(var i = 0;i < 28;i = i+1){
+	for(var i = 0;i < 50;i = i+1){
 
 		var d = document.createElement('div');
 
@@ -104,7 +104,6 @@
 
 	}
 
-
 		$(window).on("orientationchange",function(){
 		if(window.orientation == 0){
 			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-2.svg)'});
@@ -117,6 +116,23 @@
 		}
 	});
 
+
+		function draw() {
+  		shakeChange();
+		}
+		  var threshold = 30;
+		  var accChangeX = 0; 
+		  var accChangeY = 0;
+		  var accChangeT = 0;
+		function shakeChange(){
+		  var nowAccelX = accelerationX - pAccelerationX;
+		  var nowAccelY = accelerationY - pAccelerationY;
+		  var nowAccelZ = accelerationZ - pAccelerationZ;
+
+		  if(nowAccelX > threshold || nowAccelY > threshold || nowAccelZ > threshold){
+		    $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1.svg)'})
+		  }
+		}
 
 	</script>
 </body>
