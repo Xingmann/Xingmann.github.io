@@ -153,8 +153,8 @@ function handleOrientation(event) {
 		  var y = event.gamma; // In degree in the range [-90,90]
 		  var degree = map(x, -180, 180, 0, 360);
 		  if (degree > 0) {
-		  	$('.svg').css('stroke','blue');
-		  	$('body').css('background', 'red');
+		  	$('.svg').css('fill','blue');
+		  	$('body').css('background', 'white');
 		  } else {
 		  	$('.st0').css('stroke','black');
 		  	$('body').css('background', 'white');
