@@ -154,9 +154,10 @@ function handleOrientation(event) {
 		  var degree = map(x, -180, 180, 0, 360);
 		  if (degree > 89 && degree < 92) {
 		  	$('.st0').css('stroke','blue');
-
+		  	$('body').css('background', 'red');
 		  } else {
 		  	$('.st0').css('stroke','black');
+		  	$('body').css('background', 'white');
 		  }
 		  $('.containers').css('transform','rotate('+ degree +'deg)');
 	// }
