@@ -48,6 +48,9 @@
 			opacity:0.5;
 			transition: 0.5s ease-in-out;
 		}
+		#st0{
+			fill:blue;
+		}
 	</style>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
@@ -146,6 +149,7 @@
 		    $('div').css({'margin':'-4px -4.5px -5px -5px'});
 		  }
 		}
+
 ///// TUTORING ///dgg
 function handleOrientation(event) {
 	// if (completed == false) {
@@ -153,7 +157,7 @@ function handleOrientation(event) {
 		  var y = event.gamma; // In degree in the range [-90,90]
 		  var degree = map(x, -180, 180, 0, 360);
 		  if (degree > 0) {
-		  	$('.svg').css('fill','blue');
+		  	$('.st0').css('stroke','blue');
 		  	$('body').css('background', 'white');
 		  } else {
 		  	$('.st0').css('stroke','black');
