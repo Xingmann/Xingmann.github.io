@@ -159,7 +159,7 @@ function handleOrientation(event) {
 	// if (completed == false) {
 		 var x = event.beta;  // In degree in the range [-180,180]
 		  var y = event.gamma; // In degree in the range [-90,90]
-		  var degree = map(x, -180, 180, 0, 360);
+		  var degree = map(x, -180, 180, 0, -360);
 		  if (degree > 0) {
 		  	// $('.st0').css('stroke','blue');
 
