@@ -55,7 +55,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
 </head>
 <body>
-<div class="output"></div>
+
 	<script>
 
 	function map (num, in_min, in_max, out_min, out_max) {
@@ -93,7 +93,8 @@
 
 		b.className = 'circleB';
 
-		document.getElementById('container-' + i).appendChild(b);		
+		document.getElementById('container-' + i).appendChild(b);	
+
 
 
 
@@ -159,14 +160,13 @@ function handleOrientation(event) {
 		  var degree = map(x, -180, 180, 0, 360);
 		  if (degree > 0) {
 		  	// $('.st0').css('stroke','blue');
-		  	$('body').css('background', 'white');
+
 		  } else {
-		  	// $('.st0').css('stroke','black');
-		  	$('body').css('background', 'white');
+		  	$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1.svg)'});		  	
 		  }
 		  $('.containers').css('transform','rotate('+ degree +'deg)');
-		  	var k = Math.ceil(x)
-		    output.innerHTML  =  k ;
+		  	// var k = Math.ceil(x)
+		    output.innerHTML  =  x ;
 	// }
  
 }
@@ -174,5 +174,6 @@ function handleOrientation(event) {
 
 window.addEventListener('deviceorientation', handleOrientation);	
 	</script>
+<div class="output"></div>
 </body>
 </html>
