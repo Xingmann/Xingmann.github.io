@@ -73,7 +73,7 @@
 		document.body.appendChild(d);
 
 
-		d.style.transform ='rotate('+ 10*i +'deg)';
+		d.style.transform ='rotate('+ 180 +'deg)';
 		//10*i
 
 
@@ -110,23 +110,7 @@
 	}
 
 
-		$(window).on("orientationchange",function(){
-		if(window.orientation == 0){
-			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-2.svg)'});
-			$('body').css({'width':'350px'},{'margin':'30px'});
-			$('div').css({'margin':'-5px -5.5px -5px -5.5px'});
-		}
-		if(window.orientation == 90){
-			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-3.svg)'});
-			$('body').css({'width':'700px'});
-			$('div').css({'margin':'-4.5px'});
-		}
-		if(window.orientation == -90){
-			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-4.svg)'});
-			$('body').css({'width':'700px'});
-			$('div').css({'margin':'-4px -4.5px -5px -5px'});
-		}
-	});
+		
 
 
 		function draw() {
@@ -142,7 +126,7 @@
 		  var nowAccelZ = accelerationZ - pAccelerationZ;
 
 		  if(nowAccelX > threshold || nowAccelY > threshold || nowAccelZ > threshold){
-		    $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1.svg)'});
+		    $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-2.svg)'});
 		    $('body').css({'width':'400px'});
 		    $('div').css({'margin':'-4px -4.5px -5px -5px'});
 		  }
@@ -160,11 +144,29 @@
 		  	// $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1-done.svg)'});
 		  	$('body').css({'background-color':'blue'});
 		  } else {
-		  	// $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1.svg)'});		  	
+		  	$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1.svg)'});		  	
 		  }
 		  $('.containers').css('transform','rotate('+ degree +'deg)');
 		  	// var k = Math.ceil(x)
 		    output.innerHTML  =  x ;
+		    
+		  $(window).on("orientationchange",function(){
+		if(window.orientation == 0){
+			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-2.svg)'});
+			$('body').css({'width':'350px'},{'margin':'30px'});
+			$('div').css({'margin':'-5px -5.5px -5px -5.5px'});
+		}
+		if(window.orientation == 90){
+			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-3.svg)'});
+			$('body').css({'width':'700px'});
+			$('div').css({'margin':'-4.5px'});
+		}
+		if(window.orientation == -90){
+			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-4.svg)'});
+			$('body').css({'width':'700px'});
+			$('div').css({'margin':'-4px -4.5px -5px -5px'});
+		}
+	});
 
  
 }
