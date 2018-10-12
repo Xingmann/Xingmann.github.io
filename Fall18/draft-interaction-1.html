@@ -57,7 +57,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
 </head>
 <body>
-<div class="output"></div>
+<!-- <div class="output"></div> -->
 	<script>
 
 	function map (num, in_min, in_max, out_min, out_max) {
@@ -137,6 +137,8 @@
 		  var accChangeX = 0; 
 		  var accChangeY = 0;
 		  var accChangeT = 0;
+		   
+
 		function shakeChange(){
 		  var nowAccelX = accelerationX - pAccelerationX;
 		  var nowAccelY = accelerationY - pAccelerationY;
@@ -146,28 +148,34 @@
 		    $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-2.svg)'});
 		    $('body').css({'width':'400px'});
 		    $('div').css({'margin':'-4px -4.5px -5px -5px'});
+		    
 		  }
 		}
 
 	var output = document.querySelector('.output');
 
 	function handleOrientation(event) {
-
-		 var x = event.beta;  // In degree in the range [-180,180]
-		  var y = event.gamma; // In degree in the range [-90,90]
-		  var degree = map(x, -180, 180, 0, 360);
-		  if (x > 0 && x < 5) {
+		
+		var x = event.beta;  // In degree in the range [-180,180]
+		var y = event.gamma; // In degree in the range [-90,90]
+		var degree = map(x, -180, 180, 0, 360);
+		
+		if (x > 0 && x < 3) {
 		  	// $('.svg').css('stroke','red');
-		  	$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1-done.svg)'});
-		  	$('body').css({'background-color':'blue'});
+		  	// $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1-done.svg)'});
+		  	$('body').css({'background-color':'#FFEBCD'});
+		  	
 		  } else {
-		  	$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1.svg)'});	
+		  	// $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1.svg)'});	
 		  	$('body').css({'background-color':'white'});	
 		  	// $('.svg').css('stroke','black');  	
 		  }
+
+
+
 		  $('.containers').css('transform','rotate('+ degree +'deg)');
 		  	// var k = Math.ceil(x)
-		    output.innerHTML  =  x ;
+		    // output.innerHTML  =  x ;
  
 }
 
