@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body{
+			position:relative;
+			display:flex;
+			flex-direction: row;
+			flex-wrap: wrap;			
+			float:left;	
+			margin:45px;
+			padding:0;
+			width:400px;	
+		}
+		div{
+			margin:-5px -4.3px -5px -4.8px;-4.3px -4.3px -5.2px -4.2px;-4px -4.5px -5px -5px;
+		}
+		.containers{
+			transition: 1s ease-in-out;
+		}
+		.svg{
+			position:relative;
+			width:120px;
+			height:120px;
+			background-image:url(https://xingmann.github.io/Fall18/pattern-4.svg);
+			z-index: -1;
+			opacity:0.9;
+			
+		}
+		.circleA{
+			position:absolute;
+			width:20px;
+			height:20px;
+			border-radius: 50%;
+			background: black;
+			transform:translate(100%,-150%);
+			opacity:0.1;
+			transition: 0.5s ease-in-out;
+		}
+		.circleB{
+			position:absolute;
+			width:20px;
+			height:20px;
+			border-radius: 50%;
+			background: black;
+			transform:translate(450%,-450%);
+			opacity:0.5;
+			transition: 0.5s ease-in-out;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+</head>
+<body>
+
+	<script>
+	for(var i = 0;i < 18;i = i+1){
+
+		var d = document.createElement('div');
+
+		d.id = 'container-' + i;
+		d.className = 'containers';
+
+		document.body.appendChild(d);
+
+
+		d.style.transform ='rotate('+ 180 +'deg)';
+		//10*i
+
+
+		var s = document.createElement('div');
+
+		s.className = 'svg';
+		s.id = 'svg-' + i;
+
+		document.getElementById('container-' + i).appendChild(s);
+
+
+		var a = document.createElement('div');
+
+		a.className = 'circleA';
+
+		document.getElementById('container-' + i).appendChild(a);
+
+		var b = document.createElement('div');
+
+		b.className = 'circleB';
+
+		document.getElementById('container-' + i).appendChild(b);		
+
+
+
+  		$('.circleA').click(function(){
+		   $(this).css('opacity','0.5');
+		});
+
+  		$('.circleB').click(function(){
+		   $(this).css('opacity','0.1');
+		});
+
+		// $('.containers').hover(function(){
+  //  		$(this).css('transform','rotate(90deg)');
+		// });
+
+	}
+
+
+		$(window).on("orientationchange",function(){
+		if(window.orientation == 0){
+			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-2.svg)'});
+			$('body').css({'width':'350px'},{'margin':'30px'});
+			$('div').css({'margin':'-5px -5.5px -5px -5.5px'});
+		}
+		if(window.orientation == 90){
+			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-3.svg)'});
+			$('body').css({'width':'700px'});
+			$('div').css({'margin':'-4.5px'});
+		}
+		if(window.orientation == -90){
+			$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-4.svg)'});
+			$('body').css({'width':'700px'});
+			$('div').css({'margin':'-4px -4.5px -5px -5px'});
+		}
+	});
+
+
+		function draw() {
+  		shakeChange();
+		}
+		  var threshold = 30;
+		  var accChangeX = 0; 
+		  var accChangeY = 0;
+		  var accChangeT = 0;
+		function shakeChange(){
+		  var nowAccelX = accelerationX - pAccelerationX;
+		  var nowAccelY = accelerationY - pAccelerationY;
+		  var nowAccelZ = accelerationZ - pAccelerationZ;
+
+		  if(nowAccelX > threshold || nowAccelY > threshold || nowAccelZ > threshold){
+		    $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-4.svg)'});
+		    $('body').css({'width':'400px'});
+		    $('div').css({'margin':'-4px -4.5px -5px -5px'});
+		  }
+		}
+
+		window.addEventListener('deviceorientation', handleOrientation);
+		function handleOrientation(event) {
+		
+		var x = event.beta;  // In degree in the range [-180,180]
+		var y = event.gamma; // In degree in the range [-90,90]
+		var degree = map(x, -180, 180, 0, 360);
+		
+		if (x > -1 && x < 1) {
+		  	$('body').css({'background-color':'#FFF8DC'});
+		  } else {	
+		  	$('body').css({'background-color':'white'});	 	
+		  }
+		  $('.containers').css('transform','rotate('+ degree +'deg)');
+
+		}
+
+		
+	</script>
+</body>
+</html>
