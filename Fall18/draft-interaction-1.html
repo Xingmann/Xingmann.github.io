@@ -157,13 +157,13 @@
 		  var y = event.gamma; // In degree in the range [-90,90]
 		  var degree = map(x, -180, 180, 0, 360);
 		  if (x > 0 && x < 5) {
-		  	$('.svg').css('stroke','red');
-		  	// $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1-done.svg)'});
+		  	// $('.svg').css('stroke','red');
+		  	$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1-done.svg)'});
 		  	$('body').css({'background-color':'blue'});
 		  } else {
-		  	// $('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1.svg)'});	
+		  	$('.svg').css({'background-image':'url(https://xingmann.github.io/Fall18/pattern-1.svg)'});	
 		  	$('body').css({'background-color':'white'});	
-		  	$('.svg').css('stroke','black');  	
+		  	// $('.svg').css('stroke','black');  	
 		  }
 		  $('.containers').css('transform','rotate('+ degree +'deg)');
 		  	// var k = Math.ceil(x)
