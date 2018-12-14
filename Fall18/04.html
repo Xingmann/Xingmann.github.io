@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+<link rel="stylesheet" type="text/css" href="checked.css">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.4/dist/interact.min.js"></script>
+<script type="text/javascript" src="rotate.js"></script>
+
+<style type="text/css">
+	body,html{
+  		margin:0;
+  		background-color:#0a0a0a;
+  		font-family: 'Righteous', cursive;
+  		font-size: 24px;
+	}
+	.cells{
+		position:absolute;
+		left:350px;
+		top:50px;
+		clip-path: circle(200px at center);
+		z-index:0;
+		display:inline-block;
+	}
+	#img1{
+		width:100px;
+		height:100px;
+		position:relative;
+		top:30vh;
+		left:10vw;
+	}
+	#img2{
+		filter:blur(5px);
+/*    	display: flex;*/
+    	z-index:-1;
+	}
+	.shake-little.shake-constant{
+		animation-duration:8s;
+	}
+	.lense{
+		width:240px;
+		height:480px;
+		background-color:#1A1A1A;
+		position:absolute;
+		top:80px;
+		z-index:1;
+	}
+	.left{
+		border-bottom-left-radius: 240px;
+    	border-top-left-radius: 240px;
+    	left:96px;
+	}
+	.right{
+		border-bottom-right-radius: 240px;
+    	border-top-right-radius: 240px;
+    	left:280px;
+	}
+	label{
+		position:relative;
+		top:10vh;
+		left:10vw;
+	}
+	.bar{
+		width:20px;
+		height:300px;
+		background: #1A1A1A;
+		border:2px solid white;
+		border-radius: 12px;
+		position:relative;
+		left:82vw;
+		top:-36vh;
+		z-index:1;
+	}
+	#circle{
+		width:40px;
+		height:40px;
+		border-radius: 50%;
+		background: white;
+		position:relative;
+		left:81.5vw;
+		z-index:2;
+		top:-30vh;
+	}
+	.name{
+		color:#C39BD3;
+		text-align: center;
+	}
+	.p{
+		position: relative;
+		color:#C39BD3;
+  		display:inline-block;
+  		margin-top:10px;
+	}
+	.a{		
+		left:8vw;
+		top:10vh;
+		animation: swing 1s infinite;	
+	}
+	.b{
+		left:8vw;
+		top:30vh;
+		animation: jump 1s infinite;
+	}
+	.c{
+		left:78vw;
+		top:-32vh;
+		animation: scaleup 1s infinite;
+	}
+	.d{
+		left:40vw;
+		top:2vh;		
+	}
+	.dishes{
+  		display: flex;
+  		justify-content: center;		
+	}
+@keyframes jump {
+	 0% { transform: translateY(10px); }
+	 50%   { transform: translateY(20px); }
+	 100% { transform: translateY(10px); }
+}
+@keyframes swing
+{
+    15%
+    {transform: translateX(10px);}
+    30%
+    {transform: translateX(-10px);}
+    50%
+    {transform: translateX(6px);}
+    65%
+    {transform: translateX(-6px);}
+    80%
+    {transform: translateX(4px);}
+    100%
+    {transform: translateX(0);}
+}
+@keyframes scaleup {
+  0% {
+            transform: scale(1);
+  }
+  50% {
+            transform: scale(1.2);
+  }
+  100% {
+            transform: scale(1);
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="dishes">
+<img id="dish0" src="https://xingmann.github.io/Fall18/04/0.png">
+<img id="dish1" src="https://xingmann.github.io/Fall18/04/1.png">
+<img id="dish2" src="https://xingmann.github.io/Fall18/04/2.png">
+<img id="dish3" src="https://xingmann.github.io/Fall18/04/3.png">
+<img id="dish4" src="https://xingmann.github.io/Fall18/04/4.png">
+<img id="dish5" src="https://xingmann.github.io/Fall18/04/5.png">
+<img id="dish6" src="https://xingmann.github.io/Fall18/04/6.png">
+<img id="dish7" src="https://xingmann.github.io/Fall18/04/7.png">
+<img id="dish8" src="https://xingmann.github.io/Fall18/04/8.png">
+<img id="dish9" src="https://xingmann.github.io/Fall18/04/9.png">
+</div>
+<!-- <div class="p d">Choose A Cell</div> -->
+
+<div class="name"></div>
+
+<input type="checkbox" id="switch" />
+<label for="switch"></label>
+<div class="p a">Open Lenses</div>
+
+<div><img class="drag-rotate" id='img1' src='https://xingmann.github.io/Fall18/control-vector.png'></div>
+<div class="p b">Adjust Focus</div>
+
+
+
+<div class='cells'>
+	<div class='left lense'></div>
+	<div class='right lense'></div>
+	<div class="wrapper shake-little shake-constant">
+		<img id='img2' src="file:///Users/xingman/Desktop/Histology/introo.png"></img>
+	</div>
+</div>
+
+<div id='circle'></div>
+<div class='bar'></div>
+<div class="p c">Try Zooming</div>
+
+
+<script type="text/javascript">
+
+			$(".shake-little.shake-constant").css({ 'animation-duration':''});
+
+	 		var imagearray = []
+	 		var namearray = []
+	 		var arena = $.get( "http://api.are.na/v2/channels/cell-yqxaudwnwv8", 
+
+	 		function( data ){   
+		    console.log(data)
+		    
+		    for (var i = 0; i < data.contents.length; i++) {
+
+			var url = data.contents[i].image.display.url
+			imagearray.push(url)
+
+			var name = data.contents[i].generated_title
+			namearray.push(name)
+			console.log(name)		 			 
+			// var image = $("<img/>")
+			// image.attr("src",url)
+			// $('.cell').append(image)
+
+			}
+
+		  });
+
+	 		// $('#img2').addClass("shake-constant shake-little")
+	 		
+	 		//lenses
+	 		$("label").click(function(){
+
+		 		if ($('input[type=checkbox]').prop('checked')) {
+	 				$('.left').animate({
+					left:96
+					},1000);
+	 				$('.right').animate({
+					left:280
+					},1000);
+							
+
+		 		}else{
+	 				$('.left').animate({
+					left:-140
+					},1000);
+	 				$('.right').animate({
+					left:520
+					},1000);		 			
+		 		}
+
+	 		})
+					
+
+
+			//size
+    		interact('#circle').draggable({
+			  inertia: true,
+			  onmove:function (event) {
+			  var target = event.target,
+			      y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy; 
+			      console.log(y)			  
+  			  if (y < 276 && y > 0) {
+  			  	target.style.transform ='translate( 0px,' + y + 'px)';
+  			  }
+  			  if (y >= 276) {
+  			  	target.style.transform ='translate( 0px, 276px)';
+  			  }
+  			  if (y <= 0) {
+  			  	target.style.transform ='translate( 0px, 0px)';
+  			  }
+  			  target.setAttribute('data-y', y);
+
+			  var x = 1 + y/100; 
+
+			  if (x < 1) {
+			  	x = 1;
+			  }
+
+
+			  $('#img2').css({'transform':'scale('+ x +')'});
+
+			 	
+			  }
+
+			});
+
+    		$("#dish0").click(function(){
+			var uurl = imagearray[0]
+			$('#img2').attr("src",uurl)
+			var title = namearray[0]
+			$('.name').html(title)
+			});
+			$("#dish1").click(function(){
+			var uurl = imagearray[1]
+			$('#img2').attr("src",uurl)
+			var title = namearray[1]
+			$('.name').html(title)
+			});
+			$("#dish2").click(function(){
+			var uurl = imagearray[2]
+			$('#img2').attr("src",uurl)
+			var title = namearray[2]
+			$('.name').html(title)
+			});
+			$("#dish3").click(function(){
+			var uurl = imagearray[3]
+			$('#img2').attr("src",uurl)
+			var title = namearray[3]
+			$('.name').html(title)
+			});
+			$("#dish4").click(function(){
+			var uurl = imagearray[4]
+			$('#img2').attr("src",uurl)
+			var title = namearray[4]
+			$('.name').html(title)
+			});
+			$("#dish5").click(function(){
+			var uurl = imagearray[5]
+			$('#img2').attr("src",uurl)
+			var title = namearray[5]
+			$('.name').html(title)
+			});
+			$("#dish6").click(function(){
+			var uurl = imagearray[6]
+			$('#img2').attr("src",uurl)
+			var title = namearray[6]
+			$('.name').html(title)
+			});
+			$("#dish7").click(function(){
+			var uurl = imagearray[7]
+			$('#img2').attr("src",uurl)
+			var title = namearray[7]
+			$('.name').html(title)
+			});
+			$("#dish8").click(function(){
+			var uurl = imagearray[8]
+			$('#img2').attr("src",uurl)
+			var title = namearray[8]
+			$('.name').html(title)
+			});
+			$("#dish9").click(function(){
+			var uurl = imagearray[9]
+			$('#img2').attr("src",uurl)
+			var title = namearray[9]
+			$('.name').html(title)
+			});
+
+
+	
+	
+</script>
+</body>
+</html>
