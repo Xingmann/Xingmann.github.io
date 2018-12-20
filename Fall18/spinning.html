@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+	<style type="text/css">
+	body,html{
+		margin:0;
+		padding:0;
+		color:#CD5C5C;
+		width:100vw;
+		height:200vh;
+		background-color: white;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 400;
+		font-size:20px;
+		text-align:center;
+		cursor:pointer;
+	}
+	#spinning{
+		position:absolute;
+		left:350px;
+		top:200px;
+	}
+	.text{
+		position:absolute;
+		left:320px;
+		top:600px;		
+		display:inline-block;
+		width:600px;
+		margin:10px;
+	}
+	.text0{
+		font-weight: 500;
+		margin:10px;
+	}
+
+	.background{
+		width: 100vw;
+		height: 150vw;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		color:white;
+	}
+	svg{
+		padding-top: 40px;
+		padding-left: 300px;
+		z-index:-1;		
+	}
+	#run{
+		width:200px;
+		height:50px;
+		position:absolute;
+		top:600px;
+		left:530px;
+	}
+	</style>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<!-- <script src="/script.js"></script> -->	
+</head>
+<body>
+<div class="background"></div>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 24"><defs><style>.cls-1{fill:pink;stroke:#CD5C5C;}</style></defs><title>bar</title><rect class="cls-1" stroke-width="0.1" width="5" height="1.5" rx="0.75" ry="0.75"/></svg>
+<div class="spinning" id="spinning">
+<img src="head.gif">
+</div>
+<img id='run' src="run.gif">
+<div class="text">
+<div class="text0"></div>
+<div class="text1"></div>
+<div class="text2"></div>
+<div class="text3"></div>
+<div class="text4"></div>
+<div class="text5"></div>
+</div>
+<script type="text/javascript">
+
+		$('.cls-1').animate({
+			width:12
+		},8000);
+		$('.cls-1').animate({
+			width:20
+		},15000);
+		$('.cls-1').animate({
+			width:30
+		},12000);		
+		$('.cls-1').animate({
+			width:35
+		},5000);
+		$('.cls-1').animate({
+			width:50
+		},10000);
+
+
+	var onclickTimes = 0;
+	var offclickTimes = 0;
+	var hoverTimes = 0;
+	var scrollTop = 0;
+
+	var hasntMoved = true;
+	var hasScrolled = false;
+
+	// Cookies.get('name',value);
+
+	if(!Cookies.get('onclickTimes')){
+		Cookies.set('onclickTimes', 0) 
+	}
+		
+	var counter = 0;
+	var firstClick = setInterval(function(){
+		counter += 1;
+	},1000);
+
+	setTimeout(function(){		
+		if(hasntMoved){	
+		$('.text1').text("You didn't make any actions!");
+		}else{
+		$('.text1').text("You clikced on me " + Cookies.get('onclickTimes') + " times");
+		$('.text2').text("You clicked outside of me " + offclickTimes + " times");		
+		$('.text4').text("You hovered over me " + hoverTimes + " times");
+		$('.text5').text("You did not do scrolling");						
+		}
+		if(hasScrolled){
+		$('.text5').text("You did scrolling");	
+		}
+		if(onclickTimes > 0 || offclickTimes > 0){
+		$('.text3').text("It took you " + counter + " seconds to make your first click");	
+		}
+		$('.text0').text("Done! During this time:");	
+		$('#run').css('opacity','0');					
+	},50000);
+
+
+	$('.spinning').on('click', function(){
+		onclickTimes += 1;
+
+		Cookies.set('onclickTimes', onclickTimes)
+
+		if(onclickTimes == 1){
+			clearInterval(firstClick)
+			hasntMoved = false;
+		}
+		
+	})
+	
+	$('.spinning').on('mouseover', function(){
+			hoverTimes += 1;
+			hasntMoved = false;	
+	})
+
+	$('.background').on('click', function(){
+			offclickTimes += 1;
+			hasntMoved = false;	
+	})
+
+	$(window).on('scroll', function(){
+			hasScrolled = true;
+			hasntMoved = false;
+	})
+
+</script>
+</body>
+</html>
