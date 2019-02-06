@@ -294,7 +294,7 @@ a{
 	function playAudio(id){
 		console.log(id)
  		var audio = document.getElementById(id);
- 		audio.play();
+ 		AudioSource.PlayClipAtPoint(clip,transform.position);
  	}
 
  	function pauseAudio(id){
