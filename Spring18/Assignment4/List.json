@@ -3,195 +3,195 @@
 	[
 	{
 		"name": "ship horns",
-		"source":"Sources/shiphorns.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/shiphorns.mp3",
 		"link":""
 	},
 
 	{
 		"name": "morning alarm",
-		"source":"Sources/requiem.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/requiem.mp3",
 		"link":""
 	},
 
 	{
 		"name": "seagulls",
-		"source":"Sources/seagulls.mp3",
-		"link":"seagulls.html"
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/seagulls.mp3",
+		"link":"https://xingmann.github.io/Spring18/Assignment4/seagulls.html"
 	},
 
 	{
 		"name": "good morning",
-		"source":"Sources/morning.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/morning.mp3",
 		"link":""
 	},
 
 	{
 		"name": "morning reading session bell",
-		"source":"Sources/bellrings.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/bellrings.mp3",
 		"link":""
 	},
 
 	{
 		"name": "AC",
-		"source":"Sources/AC.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/AC.mp3",
 		"link":""
 	},
 
 	{
 		"name": "children playing in kindergarten",
-		"source":"Sources/children.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/children.mp3",
 		"link":""
 	},
 
 	{
 		"name": "morning exercise marching music",
-		"source":"Sources/marchsong.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/marchsong.mp3",
 		"link":""
 	},
 
 	{
 		"name": "morning exercise",
-		"source":"Sources/calisthenics.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/calisthenics.mp3",
 		"link":""
 	},
 	{
 		"name": "bird",
-		"source":"Sources/bird.mp3",
-		"link":"bird.html"
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/bird.mp3",
+		"link":"https://xingmann.github.io/Spring18/Assignment4/bird.html"
 	},
 
 	{
 		"name": "paper",
-		"source":"Sources/Paper.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/Paper.mp3",
 		"link":""
 	},
 
 	{
 		"name": "dog barks",
-		"source":"Sources/dog.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/dog.mp3",
 		"link":""
 	},
 
 	{
 		"name": "shoes rubbing",
-		"source":"Sources/basketball.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/basketball.mp3",
 		"link":""
 	},
 
 	{
 		"name": "football kicking",
-		"source":"Sources/football.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/football.mp3",
 		"link":""
 	},
 
 	{
 		"name": "sea waves",
-		"source":"Sources/waves.mp3",
-		"link":"seawaves.html"
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/waves.mp3",
+		"link":"https://xingmann.github.io/Spring18/Assignment4/seawaves.html"
 	},
 
 	{
 		"name": "weibo refresh sound",
-		"source":"Sources/weibo.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/weibo.mp3",
 		"link":""
 	},
 
 	{
 		"name": "opening",
-		"source":"Sources/opening.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/opening.mp3",
 		"link":""
 	},	
 
 	{
 		"name": "cicada",
-		"source":"Sources/cicada.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/cicada.mp3",
 		"link":""
 	},
 
 	{
 		"name": "badminton",
-		"source":"Sources/badminton.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/badminton.mp3",
 		"link":""
 	},
 
 	{
 		"name": "bike bell",
-		"source":"Sources/bike.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/bike.mp3",
 		"link":""
 	},
 
 	{
 		"name": "swimming",
-		"source":"Sources/swimming.mp3",
-		"link":"underwater.html"
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/swimming.mp3",
+		"link":"https://xingmann.github.io/Spring18/Assignment4/underwater.html"
 	},
 
 	{
 		"name": "chopping",
-		"source":"Sources/chopping.mp3",
-		"link":"chopping.html"
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/chopping.mp3",
+		"link":"https://xingmann.github.io/Spring18/Assignment4/chopping.html"
 	},
 
 	{
 		"name": "frying",
-		"source":"Sources/frying.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/frying.mp3",
 		"link":""
 	},
 
 	{
 		"name": "frog",
-		"source":"Sources/frog.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/frog.mp3",
 		"link":""
 	},
 
 
 	{
 		"name": "boating",
-		"source":"Sources/boating.mp3",
-		"link":"ripples.html"
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/boating.mp3",
+		"link":"https://xingmann.github.io/Spring18/Assignment4/ripples.html"
 	},
 
 	{
 		"name": "duck quack",
-		"source":"Sources/duck.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/duck.mp3",
 		"link":""
 	},
 
 	{
 		"name": "piano",
-		"source":"Sources/piano.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/piano.mp3",
 		"link":""
 	},
 
 
 	{
 		"name": "typhoon",
-		"source":"Sources/typhoon.mp3",
-		"link":"typhoon.html"
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/typhoon.mp3",
+		"link":"https://xingmann.github.io/Spring18/Assignment4/typhoon.html"
 	},
 
 	{
 		"name": "car",
-		"source":"Sources/car.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/car.mp3",
 		"link":""
 	},
 
 
 	{
 		"name": "airplane",
-		"source":"Sources/airplane.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/airplane.mp3",
 		"link":""
 	},
 
 	{
 		"name": "stamp",
-		"source":"Sources/stamp.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/stamp.mp3",
 		"link":""
 	},
 
 	{
 		"name": "themanmachine",
-		"source":"Sources/manmachine.mp3",
+		"source":"https://xingmann.github.io/Spring18/Assignment4/Sources/manmachine.mp3",
 		"link":""
 	}
 
