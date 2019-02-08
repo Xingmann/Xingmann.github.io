@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600" rel="stylesheet">
+<style>
+	body,html{
+		margin:0;
+		color:#4682B4;
+	}
+
+	.container{
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+		background: #b0c4de;
+		position: sticky;
+		top:0;
+	}
+	.item{
+		background-color: #F2F3F4;
+    	width: 100px;
+    	height: 40px;
+    	margin: 10px 5px 10px 5px;
+    	color: #4682B4;
+		text-align:center;
+    	transition: 0.3s;
+    	text-decoration: none;
+    	border-radius: 8px;
+	}
+	.item:hover{
+		background-color: #4682B4;		
+	}
+	p:hover{
+		color:#F2F3F4;
+	}
+	p{
+		margin-top: 10px;
+		font-weight: 300;
+		font-size:0.9em;
+		transition: 0.3s;
+	}
+	.content{
+		margin:2.6vw;
+		text-align:center;		
+	}
+	hr{
+		color:#7a9cc7;
+		border-top: dotted;
+		font-size:10em;
+	}
+	a{
+		text-decoration: none;
+		color:#4682B4;
+	}
+	h3{
+		font-size:2em;
+		font-weight: 600;
+	}
+	h4{
+		font-weight: 400;
+		padding-left: 200px;
+		padding-right:200px;
+	}
+	img{
+		box-shadow: 0 0 10px #888888;
+	}
+	.back{
+		position: absolute;
+		left:10px;
+		width:40px;
+		border-radius: 50%;
+	}
+	.top{
+		display:flex;
+		justify-content: center;
+		margin-left:48vw;
+		width:40px;
+		border-radius: 50%;
+	}
+	.poster{
+		width:250px;
+	}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="item back"><a href="index.html"><p>←</p></a></div>
+<div class="item"><a href="#A"><p>EGALITARIAN</p></a></div>
+<div class="item"><a href="#B"><p>NEUROTIC</p></a></div>
+<div class="item"><a href="#C"><p>MENTALITY</p></a></div>
+<div class="item"><a href="#D"><p>A READER</p></a></div>
+</div>
+<div class=content>
+
+<h3  id="A">EGALITARIAN</h3>
+<h4>EGALITARIAN is a hypothetical coffee and tea shop ☕️🍵</h4>
+<img src="egalitarian/NewsLetter.png" style="width:400px;">
+<h4>[ Newsletter ]</h4>
+<img class="poster" src="egalitarian/Poster1.png">
+<img class="poster" src="egalitarian/Poster2.png">
+<img class="poster" src="egalitarian/Poster3.png">
+<img class="poster" src="egalitarian/Poster4.png">
+<h4>[ A Poster Series For An Instore Event ]</h4>
+<img src="egalitarian/catalog.gif" style="width:800px;">
+<h4>[ The Store Shop Catalog ]</h4>
+
+
+<hr id="B">
+<h3 >NEUROTIC</h3>
+<h4>NEUROTIC is a book which collects quotes from Alvy Singer in movie <i>Annie Hall</i> by Woody Allen. Windsor is the only typeface used here. This book is a tribute to both Windsor the typeface, and Alvy Singer the neurotic.</h4>
+<img src="neurotic.gif" style="width:800px;">
+
+
+<hr id="C">
+<h3>MENTALITY</h3>
+<h4>MENTALITY is a book about artist/writer Alannah Bareham.</h4>
+<img src="mentality.gif" style="width:800px;">
+
+
+<hr id="D">
+<h3>READING READER</h3>
+<h4>READING READER is a book playing around with quotes.</h4>
+<img src="reader.gif" style="width:380px;">
+</div>
+<hr>
+<div class="top item"><a href="#A"><p>↑</p></a></div>
+</div>
+</body>
+</html>
