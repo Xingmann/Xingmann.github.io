@@ -26,6 +26,7 @@
 		font-weight: 300;
 		text-align: center;
 		padding:50vh 20vh 40vh 20vh;
+		animation:fadeIn 2s ease-in-out;
 	}
 	.serif{
 		display:inline-block;
@@ -109,21 +110,15 @@
 	a:hover{
 		color:#1d41bc;
 	}
-	@keyframes swing
-	{
-    15%
-    {transform: translateX(10px);}
-    30%
-    {transform: translateX(0px);}
-    50%
-    {transform: translateX(6px);}
-    65%
-    {transform: translateX(0px);}
-    80%
-    {transform: translateX(4px);}
-    100%
-    {transform: translateX(0);}
-	}	
+	@keyframes fadeIn {
+  	0% {
+    opacity: 0;
+  	}
+
+  	100% {
+    opacity: 1;
+  	}
+	}
 </style>
 </head>
 <body>
