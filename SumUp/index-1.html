@@ -7,10 +7,9 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="icon.ico" />
+ <link rel="shortcut icon" href="icon.ico" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
 	body,html{
 		font-family: 'Montserrat', sans-serif;
@@ -18,15 +17,15 @@
 	}
 	body{
 		background-repeat: no-repeat;
-  		background-image:  url(https://66.media.tumblr.com/905984498a65b53ad7336eaebd7df376/tumblr_pb940nzPxp1w6uqh8o1_500.gif);
+  		background-image:  url(wall.gif);
   		background-attachment: fixed;
   		background-position: center;
 	}
 	.head{
 		font-size:3.2vw;
-		font-weight: 400;
+		font-weight: 300;
 		text-align: center;
-		padding:40vh 20vh 60vh 20vh;
+		padding:50vh 20vh 40vh 20vh;
 	}
 	.serif{
 		display:inline-block;
@@ -40,7 +39,7 @@
 		 text-transform: uppercase;
 		 font-weight:300;
 		 font-size:2vw;
-		 margin:0;
+		 margin:2vw;
 		 text-align: center
 	}
 	a{
@@ -84,10 +83,19 @@
 		display: inline-block;
 		text-align: center;
 		padding:1vw 20vw;
+		width:60vw
 	}
 	.scroll{
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'Cinzel', serif;
+		font-size: 1.6vw;
 		font-weight: 500;
+		text-align: center;
+		animation:swing 1s infinite;
+	}
+	.sign{
+		width:100vw;
+		text-align: center;
+		font-weight: 400;
 	}
 	.web{
 		width:96vw; 
@@ -97,50 +105,30 @@
 	}
 	.web:hover{
 		filter:blur(0px);
+	}
+	a:hover{
+		color:#1d41bc;
+	}
+	@keyframes swing
+	{
+    15%
+    {transform: translateX(10px);}
+    30%
+    {transform: translateX(0px);}
+    50%
+    {transform: translateX(6px);}
+    65%
+    {transform: translateX(0px);}
+    80%
+    {transform: translateX(4px);}
+    100%
+    {transform: translateX(0);}
 	}	
 </style>
 </head>
 <body>
-<div class="head">
-Hi I'm XINGMAN<br><!-- I do  --><a href="#MG" class="serif">motion graphics</a>, <a href="#WEB" class="serif">webpages</a>, and <a href="#MORE" class="serif">more</a>
-</div>
-   <h2 id="MG">Motion graphics</h2>
-  <div class="scrolling-wrapper" >
-   <iframe src="https://player.vimeo.com/video/315723287" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
-   <iframe src="https://player.vimeo.com/video/315723900" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
-   <iframe src="https://player.vimeo.com/video/316811092" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	</div>
-
-    <div class="info">ORGA is a scientific documentary channel exists in the future for the younger generations to know the world of science and nature.<br><span class="scroll">SCROLL → TO SEE MORE</span></div>
-    <hr>
-    <div class="scrolling-wrapper">
-  <img class="poster" src="posters/01.gif">
-  <img class="poster" src="posters/02.gif">
-  <img class="poster" src="posters/03.gif">
-  <img class="poster" src="posters/04.gif">
-  <img class="poster" src="posters/05.gif">
-	</div>
-	 <div class="info">When various trends and styles contract and conflict with each other, do we still have a clear definition of what beauty is?</div>
-    <hr>
-    <div class="scrolling-wrapper">	
-	<iframe src="https://player.vimeo.com/video/316654369" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>	
-	<iframe src="https://player.vimeo.com/video/315721506" width="1250" height="580" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	 <iframe src="https://player.vimeo.com/video/315716745" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
-	 </div>
-	 <div class="info">Others</div>
-	 <hr>
-   <h2 id="WEB">Webpages</h2>
-   <div class="scrolling-wrapper">
-   <a href="https://xingmann.github.io/Spring18/Assignment2/1.html" target="_blank">
-   <img class="web" src="A.png"></a>
-   <a href="https://xingmann.github.io/Fall18/intro.html" target="_blank">
-   <img class="web" src="B.png"></a>
-   <a href="https://xingmann.github.io/Spring18/Assignment4/index.html" target="_blank">
-   <img class="web" src="C.png"></a>
-   </div>
-   <div class="info" style="width:100vw">Click To Visit Site</div>
+	<div id="MORE" class="sign">↓</div>
    <hr>
-   <h2 id="MORE">More</h2>
    <div class="scrolling-wrapper">
    <img class="edit" src="egalitarian/Poster1.png">
 	<img class="edit" src="egalitarian/Poster2.png">
@@ -149,9 +137,62 @@ Hi I'm XINGMAN<br><!-- I do  --><a href="#MG" class="serif">motion graphics</a>,
 	<img class="edit" src="egalitarian/NewsLetter.png">
 	<img class="edit" src="egalitarian/catalog.gif">	
 	<img class="edit" src="mentality.gif">
-	<img class="edit" src="neurotic.gif">
+	<img class="edit" src="neurotic.gif">	
    </div>
+   <div class="info">navigate to see more → </div>
+  <!--  <h2 >More</h2> -->
 
+	<hr >
+   <div  id="WEB" class="scrolling-wrapper">
+   <a href="https://xingmann.github.io/Spring18/Assignment2/1.html" target="_blank">
+   <img class="web" src="A.png"></a>
+   <a href="https://xingmann.github.io/Fall18/intro.html" target="_blank">
+   <img class="web" src="B.png"></a>
+   <a href="https://xingmann.github.io/Spring18/Assignment4/index.html" target="_blank">
+   <img class="web" src="C.png"></a>
+   </div>
+   <div class="info">click to visit site</div>
+   <span class="info">[  →  ]</span>
+  
+   <!-- <h2 >Webpages</h2> -->
+
+   <hr>
+
+    <div class="scrolling-wrapper">	
+	<iframe src="https://player.vimeo.com/video/316654369" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>	
+	<iframe src="https://player.vimeo.com/video/315721506" width="1250" height="580" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	 <iframe src="https://player.vimeo.com/video/315716745" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
+	 </div>
+	 <span class="info">[  →  ]</span>
+	<hr>
+
+	<div class="scrolling-wrapper">
+  <img class="poster" src="posters/01.gif">
+  <img class="poster" src="posters/02.gif">
+  <img class="poster" src="posters/03.gif">
+  <img class="poster" src="posters/04.gif">
+  <img class="poster" src="posters/05.gif">
+	</div>
+	<span class="info">[  →  ]</span>
+
+    <hr  id="MG">
+
+   <div class="scrolling-wrapper" >
+   <iframe src="https://player.vimeo.com/video/315723287" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
+   <iframe src="https://player.vimeo.com/video/315723900" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
+   <iframe src="https://player.vimeo.com/video/316811092" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+   <div class="info">navigate to see more → </div>
+    <!--    <h2 >Motion graphics</h2> -->
+
+
+<div  class="head">
+Hi I'm XINGMAN<br><!-- I do  --><a href="#MG" class="serif">motion graphics</a>, <a href="#WEB" class="serif">webpages</a>, and <a href="#MORE" class="serif">more</a>
+</div>
+
+<div class="sign" id="START">↑</div>
+
+  
 
 </body>
 

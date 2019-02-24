@@ -1,101 +1,160 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600" rel="stylesheet">
 	<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+ <link rel="shortcut icon" href="icon.ico" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
 <style>
 	body,html{
-		margin:0;
 		font-family: 'Montserrat', sans-serif;
-		background-image: url(https://cdn.dribbble.com/users/1686625/screenshots/3437003/council_loader.gif);
-		background-size: 30%;
-		background-repeat:no-repeat;
-		background-position: 50% 12%; 
+		color: #1a1f54;
 	}
-	.container{
-		display:flex;
-		flex-direction: row;
-		margin-top: 26vh;
-		justify-content: center;		
+	body{
+		background-repeat: no-repeat;
+  		background-image:  url(wall.gif);
+  		background-attachment: fixed;
+  		background-position: center;
 	}
-	.item{
-		background-color: #F2F3F4;
-    	width: 300px;
-    	height: 300px;
-    	margin: 40px;
-    	line-height: 20px;
-    	color: grey;
-		text-align:center;
-    	transition: 0.2s;
-    	text-decoration: none;
-    	border-radius: 20px;//16px
-	}
-	p{
-		padding-top:140px;
-		font-size:1.4em;
-	}
-	h1{
-		text-align: center;
-		text-decoration: underline dotted;
-		text-underline-position: under;
+	.head{
+		font-size:3.2vw;
 		font-weight: 400;
-		margin-top: 60px;
+		text-align: center;
+		padding:40vh 20vh 60vh 20vh;
+	}
+	.serif{
+		display:inline-block;
+		line-height:0.9;
+		font-family: 'Cinzel', serif;
+		text-transform: uppercase;
+		font-size:3.2vw;
+		border-bottom:0.8px solid;	
 	}
 	h2{
-		text-align: center;
-		font-weight: 200;
-		margin-top: 30px;
-	}
-	h5{
-		text-align: center;
-		font-weight: 200;
-		margin-top: 5vh;
-	}
-	img{
-		width:50%;
-		height:50%;
-		z-index:-1;
+		 text-transform: uppercase;
+		 font-weight:300;
+		 font-size:2vw;
+		 margin:0;
+		 text-align: center
 	}
 	a{
 		text-decoration: none;
+		color:currentColor;
 	}
-	.item:hover{
-		border-radius: 50%;
-		animation:jump 1s infinite;
-		background-color: #F7F9F9;
+	.poster{		
+  		width:26vw;
+  		margin-left: 10px;
+  		display: inline-block;
 	}
-	@keyframes jump {
-	 0% { transform: translateY(10px); }
-	 50%   { transform: translateY(-30px); }
-	 100% { transform: translateY(10px); }
+	.edit{
+		height:40vw;
+  		margin-left: 4vw;
+  		display: inline-block;
 	}
-	#M:hover{
-		color:#729672 ;
-		box-shadow:0 0 80px inset #8FBC8B;		
+	iframe{
+  		display: inline-block;
 	}
-	#W:hover{
-		color: #CD5C5C;
-		box-shadow:0 0 80px inset #F08080;
+	.scrolling-wrapper {
+		/*padding: 2vh;*/
+  		overflow-x: scroll;
+  		overflow-y: hidden;
+  		white-space: nowrap;
+  	}
+	.scrolling-wrapper,{
+        overflow-scrolling: touch;
+        ::scrollbar{
+        	display:none;
 	}
-	#P:hover{
-		color:#7a9cc7 ;
-		box-shadow:0 0 80px inset #b0c4de;		
 	}
+	hr{
+		color:#1a1f54;
+		/*border-top: dotted;*/
+		font-size:10em;
+		margin:3vw;
+	}
+	.info{
+		font-family: 'Cinzel', serif;
+		font-size: 1.6vw;
+		display: inline-block;
+		text-align: center;
+		padding:1vw 20vw;
+	}
+	.scroll{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+	}
+	.web{
+		width:96vw; 
+		height:50vw;
+		margin:0 2vw 0 2vw;
+		filter:blur(3px);
+	}
+	.web:hover{
+		filter:blur(0px);
+	}
+	textarea{
+		display:none;
+	}	
 </style>
 </head>
 <body>
-<h1>A Sum Up Of Things</h1>
-<h2>XINGMAN CHENG</h2>
-<!-- <img src=https://cdn.dribbble.com/users/1686625/screenshots/3437003/council_loader.gif> -->
-<div class="container">
-<a href="motion.html"><div class="item" id="M"><p>MOTION GRAPHICS</p></div></a>
-<a href="web.html"><div class="item" id="W"><p>WEBPAGES</p></div></a>
-<a href="editorial.html"><div class="item" id="P"><p>EDITORIALS</p></div></a>
-
+<div class="head">
+Hi I'm XINGMAN<br><!-- I do  --><a href="#MG" class="serif">motion graphics</a>, <a href="#WEB" class="serif">webpages</a>, and <a href="#MORE" class="serif">more</a>
 </div>
-<h5>Site Designed & Developed By Xingman</h5>
+   <h2 id="MG">Motion graphics</h2>
+  <div class="scrolling-wrapper" >
+   <iframe src="https://player.vimeo.com/video/315723287" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
+   <iframe src="https://player.vimeo.com/video/315723900" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
+   <iframe src="https://player.vimeo.com/video/316811092" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
 
+    <div class="info">ORGA is a scientific documentary channel exists in the future for the younger generations to know the world of science and nature.<br><span class="scroll">SCROLL → TO SEE MORE</span></div>
+    <hr>
+    <div class="scrolling-wrapper">
+  <img class="poster" src="posters/01.gif">
+  <img class="poster" src="posters/02.gif">
+  <img class="poster" src="posters/03.gif">
+  <img class="poster" src="posters/04.gif">
+  <img class="poster" src="posters/05.gif">
+	</div>
+	 <div class="info">When various trends and styles contract and conflict with each other, do we still have a clear definition of what beauty is?</div>
+    <hr>
+    <div class="scrolling-wrapper">	
+	<iframe src="https://player.vimeo.com/video/316654369" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>	
+	<iframe src="https://player.vimeo.com/video/315721506" width="1250" height="580" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	 <iframe src="https://player.vimeo.com/video/315716745" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
+	 </div>
+	 <div class="info">Others</div>
+	 <hr>
+   <h2 id="WEB">Webpages</h2>
+   <div class="scrolling-wrapper">
+   <a href="https://xingmann.github.io/Spring18/Assignment2/1.html" target="_blank">
+   <img class="web" src="A.png"></a>
+   <a href="https://xingmann.github.io/Fall18/intro.html" target="_blank">
+   <img class="web" src="B.png"></a>
+   <a href="https://xingmann.github.io/Spring18/Assignment4/index.html" target="_blank">
+   <img class="web" src="C.png"></a>
+   </div>
+   <div class="info" style="width:100vw">Click To Visit Site</div>
+   <hr>
+   <h2 id="MORE" autofocus>More</h2>
+   <div class="scrolling-wrapper">
+   <img class="edit" src="egalitarian/Poster1.png">
+	<img class="edit" src="egalitarian/Poster2.png">
+	<img class="edit" src="egalitarian/Poster3.png">
+	<img class="edit" src="egalitarian/Poster4.png">
+	<img class="edit" src="egalitarian/NewsLetter.png">
+	<img class="edit" src="egalitarian/catalog.gif">	
+	<img class="edit" src="mentality.gif">
+	<img class="edit" src="neurotic.gif">
+   </div>
+   <textarea autofocus></textarea>
 
 </body>
+
 </html>
