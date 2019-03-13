@@ -36,6 +36,14 @@
 		font-size:3.2vw;
 		border-bottom:0.8px solid;	
 	}
+	.serif:hover{
+		animation:moving 1.6s ease-in-out;
+	}
+	@keyframes moving {
+  		0%   {transform: translateY(0vw);}
+  		50%  {transform: translateY(5vw);}
+  		100%  {transform: translateY(0vw);}
+	}	
 	h2{
 		 text-transform: uppercase;
 		 font-weight:300;
@@ -187,7 +195,7 @@
 
 
 <div  class="head">
-Hi I'm XINGMAN<br><!-- I do  --><a href="#MG" class="serif">motion graphics</a>, <a href="#WEB" class="serif">webpages</a>, and <a href="#MORE" class="serif">more</a>
+<div>Hi I'm XINGMAN</div><br>I do <a href="#MG" class="serif">motion graphics</a>, <a href="#WEB" class="serif">webpages</a>, and <a href="#MORE" class="serif">more</a>
 </div>
 
 <div class="sign" id="START">↑</div>

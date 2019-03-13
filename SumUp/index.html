@@ -3,13 +3,14 @@
 <head>
 	<title></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
-<script
+<!-- <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> -->
  <link rel="shortcut icon" href="icon.ico" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <style>
 	body,html{
 		font-family: 'Montserrat', sans-serif;
@@ -20,6 +21,11 @@
   		background-image:  url(wall.gif);
   		background-attachment: fixed;
   		background-position: center;
+	}
+	@keyframes moving {
+  		0%   {transform: translateY(0vw);}
+  		50%  {transform: translateY(5vw);}
+  		100%  {transform: translateY(0vw);}
 	}
 	.head{
 		font-size:3.2vw;
@@ -35,6 +41,9 @@
 		text-transform: uppercase;
 		font-size:3.2vw;
 		border-bottom:0.8px solid;	
+	}
+	.serif:hover{
+		animation:moving 1.6s ease-in-out;
 	}
 	h2{
 		 text-transform: uppercase;
@@ -70,6 +79,7 @@
         overflow-scrolling: touch;
         ::scrollbar{
         	display:none;
+        	width: thin;
 	}
 	}
 	hr{
@@ -123,11 +133,14 @@
     opacity: 1;
   	}
 	}
+	}
 </style>
 </head>
+
 <body>
+
 	<div  class="head">
-	Hi I'm XINGMAN<br><!-- I do  --><a href="#MG" class="serif">motion graphics</a>, <a href="#WEB" class="serif">webpages</a>, and <a href="#MORE" class="serif">more</a>
+	<div>Hi I'm XINGMAN</div><br>I do <a href="#MG" class="serif">motion graphics</a>, <a href="#WEB" class="serif">webpages</a>, and <a href="#MORE" class="serif">more</a>
 	</div>
 
 	<hr  id="MG">
@@ -210,5 +223,6 @@
   
 
 </body>
+
 
 </html>
