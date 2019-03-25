@@ -36,13 +36,29 @@
 		font-size:3.2vw;
 		border-bottom:0.8px solid;	
 	}
-	.serif:hover{
-		animation:moving 1.6s ease-in-out;
+	#UP:hover{
+		animation:up 1s ease-in-out;
 	}
-	@keyframes moving {
+	#DOWN:hover{
+		animation:down 1s ease-in-out;
+	}
+	#RIGHT:hover{
+		animation:rightt 1s ease-in-out;
+	}
+	@keyframes down {
   		0%   {transform: translateY(0vw);}
-  		50%  {transform: translateY(5vw);}
+  		50%  {transform: translateY(3vw);}
   		100%  {transform: translateY(0vw);}
+	}
+	@keyframes up {
+  		0%   {transform: translateY(0vw);}
+  		50%  {transform: translateY(-3vw);}
+  		100%  {transform: translateY(0vw);}
+	}
+	@keyframes rightt {
+  		0%   {transform: translateX(0vw);}
+  		50%  {transform: translateX(3vw);}
+  		100%  {transform: translateX(0vw);}
 	}	
 	h2{
 		 text-transform: uppercase;
@@ -222,11 +238,12 @@
 
 
 <div  class="head">
-<div>Hi I'm XINGMAN</div><br>I do <a href="#MG" class="serif">motion graphics</a>, <a href="#WEB" class="serif">webpages</a>, and <a href="#MORE" class="serif">more</a>
+<div>Hi I'm XINGMAN</div><br>I do <a href="#MG" class="serif" id="UP">motion graphics</a>, <a href="#WEB" class="serif"id="DOWN">webpages</a>, and <a href="#MORE" class="serif" id="RIGHT">more</a>
 </div>
 
 <div class="sign" id="START">↑</div>
 
+</script>
   
 
 </body>
