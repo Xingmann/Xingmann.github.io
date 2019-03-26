@@ -8,6 +8,8 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
  <link rel="shortcut icon" href="icon.ico" />
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
 <style>
@@ -107,7 +109,7 @@
 		font-size: 1.6vw;
 		display: inline-block;
 		text-align: center;
-		padding:1vw 20vw;
+		padding:3vw 20vw;
 		width:60vw
 	}
 	.scroll{
@@ -147,30 +149,31 @@
     opacity: 1;
   	}
 	}
+
 </style>
 </head>
 <body>
 	<h5>Site Designed & Developed By Xingman</h5>
 	<div class="sign"><a href="#START">↓</a></div>
    	<hr>
-   	<div class="scrolling-wrapper">
+   	<div>
 	<img class="edit" src="mentality.gif">
-	<img class="edit" src="book1.png">	
+	<img class="edit" style="margin-left:0vw" src="book1.png">	
 	</div>
 	<hr>
 
-   	<div class="scrolling-wrapper">
+   	<div>
 	<img class="edit" src="book2.png">
 	<img class="edit" src="neurotic.gif">
 	</div>
 	<hr>	
-   <div class="scrolling-wrapper">	
+   <div class="main-carousel">	
    	<img class="edit" src="quote1.gif">
    	<img class="edit" src="quote2.gif">
    	<img class="edit" src="quote.png">
    </div>
    <hr id="MORE">
-   <div class="scrolling-wrapper">
+   <div class="main-carousel">
    <img class="edit" src="posters.png">
    <img class="edit" src="egalitarian/catalog.gif">
    <img class="edit" src="egalitarian/NewsLetter.png">
@@ -178,74 +181,73 @@
 	<img class="edit" src="egalitarian/pooster2.png">	
 	</div>
 
-   <div class="info">navigate to see more → </div>
+   
   <!--  <h2 >More</h2> -->
   	<hr >
-	<div class="scrolling-wrapper">
+	<div class="main-carousel">
      <a href="https://xingmann.github.io/Spring18/Assignment4/index.html" target="_blank">
    <img class="web" src="C.png"></a>
    <img width="1100vw" height="580vw" style="margin-left:15vw;" src="sound.png">
 	</div>
-	<span class="info">[  →  ]</span>
+
 	<hr >
-	<div class="scrolling-wrapper">	
+	<div class="main-carousel">	
 	<a href="https://xingmann.github.io/Fall18/intro.html" target="_blank">
    <img class="web" src="B.png"></a>
    <img width="1100vw" height="580vw" style="margin-left:15vw;" src="micro.png">
 	</div>
-	<span class="info">[  →  ]</span>
 
    <hr >
-   <div  id="WEB" class="scrolling-wrapper">
+   <div  id="WEB" class="main-carousel">
    <a href="https://xingmann.github.io/Spring18/Assignment2/1.html" target="_blank">
    <img class="web" src="A.png"></a>
    <img width="1100vw" height="580vw" style="margin-left:15vw;" src="ipanema.png">  
    </div>
-   <div class="info">click to visit site 丨 navigate to see more → </div>
+   <div class="info">click to visit site </div>
    <div class="info"></div>
   
    <!-- <h2 >Webpages</h2> -->
    <hr>
-	<div class="scrolling-wrapper">	
+	<div class="main-carousel">
 	 <iframe src="https://player.vimeo.com/video/315716745" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
 	 <img width="1100vw" height="580vw" style="margin-left:15vw;" src="unit.png">
 	 </div>
-	 <span class="info">[  →  ]</span>
+	 
    <hr>
-	<div class="scrolling-wrapper">	
+	<div class="main-carousel">
 	<iframe src="https://player.vimeo.com/video/315721506" width="1250" height="580" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<img width="1100vw" height="580vw" style="margin-left:15vw;" src="self.png">
 	</div>
-	<span class="info">[  →  ]</span>
+	
 	<hr>
-    <div class="scrolling-wrapper">	
+    <div class="main-carousel">	
 	<iframe src="https://player.vimeo.com/video/316654369" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<img width="1100vw" height="580vw" style="margin-left:15vw;" src="block.png">
 	</div>
-	<span class="info">[  →  ]</span>
+	
 
 
 	<hr>
 
-	<div class="scrolling-wrapper">
+	<div class="main-carousel">
   <img class="poster" src="posters/01.gif">
   <img class="poster" src="posters/02.gif">
   <img class="poster" src="posters/03.gif">
   <img class="poster" src="posters/04.gif">
   <img class="poster" src="posters/05.gif">
-  <img width="1100vw" height="580vw" style="margin-left:15vw;" src="beauty.png">
+  <img class="carousel-cell" width="1100vw" height="580vw" style="margin-left:15vw;" src="beauty.png">
 	</div>
-	<span class="info">[  →  ]</span>
+	
 
     <hr  id="MG">
 
-   <div class="scrolling-wrapper" >
-   <iframe src="https://player.vimeo.com/video/315723287" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
-   <iframe src="https://player.vimeo.com/video/315723900" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
-   <iframe src="https://player.vimeo.com/video/316811092" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-   <img width="1100vw" height="580vw" style="margin-left:15vw;" src="orga.png">
+   <div class="main-carousel">
+   <iframe class="carousel-cell" src="https://player.vimeo.com/video/315723287" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
+   <iframe class="carousel-cell" src="https://player.vimeo.com/video/315723900" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload></iframe>
+   <iframe class="carousel-cell" src="https://player.vimeo.com/video/316811092" width="1250vw" height="580vw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+   <img class="carousel-cell" width="1100vw" height="580vw" src="orga.png">
 	</div>
-   <div class="info">navigate to see more → </div>
+   <!-- <div class="info">navigate to see more → </div> -->
     <!--    <h2 >Motion graphics</h2> -->
 
 
@@ -255,7 +257,12 @@
 
 <div class="sign" id="START">↑</div>
 
-  
+<script type="text/javascript">
+	$('.main-carousel').flickity({
+  	cellAlign: 'left',
+  	contain: true
+	});
+</script>
 
 </body>
 
