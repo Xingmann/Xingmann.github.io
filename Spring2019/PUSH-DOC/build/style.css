@@ -6,6 +6,7 @@ body, html{
 	background-color: #f4f4f4;
 	color:#3a3a3a;
 	text-align: center;
+	padding: 0 3em;
 }
 .button{
 	width:50px;
@@ -30,3 +31,4 @@ ul, li{
 .info{
 	margin:0 10em;
 }
+
