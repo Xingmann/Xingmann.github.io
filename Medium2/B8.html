@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500&display=swap" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+	<style>
+	body,html{
+		font-family: 'Cormorant Garamond', serif;
+		font-weight: 400;
+		font-size:20px;
+		margin:0;
+		padding:0;
+		cursor:e-resize;
+		background-image: linear-gradient(to left, #262626, #333333, #4c4c4c);
+		height:100%;
+	}
+	.left{
+		position:absolute;
+		top:50%;
+		left:8%;
+	}
+	.right{
+		position:absolute;
+		top:50%;
+		right:8%;
+	}
+	.image{
+		margin-top: -20%;
+		height:480px;
+		width:350px;
+		border:1px;
+	}
+	img{
+		height:100%;
+		width:100%;
+	}
+	#B7{
+		position:absolute;
+		color:#F2F2F2;
+		animation: slideOut 3s ease-in-out forwards;
+		width:1280px;
+		height:660px;
+		left:0;
+	}
+	#B8{
+		position:absolute;
+		left:100%;
+		color:#F2F2F2;
+		animation-delay: 3s;
+		animation: fadeIn 3s ease-in-out;
+		width:1280px;
+		height:660px;
+	}
+	@keyframes fadeIn {
+	  0% {
+	    opacity: 0;
+	  }
+	
+	  100% {
+	    opacity: 1;
+	  }
+	}
+	@keyframes slideOut {
+	  0% {
+	    left: 0;
+	  }
+		100% {
+	    left: -102%;
+	  }
+	}
+	.later{
+		opacity:0;
+		animation:fadeIn 3s forwards;
+		animation-delay: 3.5s;
+	}
+	</style>
+</head>
+	<body>
+
+		<div id="B7">
+		<div class="text right" style="top:30%; line-height: 150%;">
+		" As the judge of this court I now announce that you are <br> &nbsp;&nbsp;GUILTY and shall receive death sentence. <br>&nbsp;&nbsp;Anything you' d like to say? " <br><br><br>" No. "</span> <br><br><br> " This court is adjourned. "
+		</div>
+		<div class="image left"><img src="B7.png"></div>
+
+		<div id="B8">
+		<div class="text right" >
+		He is now escorted towards the guillotine.
+		</div> 
+		<div class="image left"><img style="height:75%; margin-top:15%;" src="B8.jpg"></div>
+		</div>
+
+		<script>
+
+			document.addEventListener('click',function(){
+				window.open('B9.html', '_self');
+			});
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500&display=swap" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+	<style>
+	body,html{
+		font-family: 'Cormorant Garamond', serif;
+		font-weight: 400;
+		font-size:20px;
+		margin:0;
+		padding:0;
+		cursor:e-resize;
+	}
+	.left{
+		position:absolute;
+		top:50%;
+		left:8%;
+	}
+	.right{
+		position:absolute;
+		top:50%;
+		right:8%;
+	}
+	.image{
+		margin-top: -20%;
+		height:480px;
+		width:350px;
+		border:1px;
+		z-index:100;
+	}
+	img{
+		height:100%;
+		width:100%;
+	}
+	#A1{
+		background-color: #0C0C0C;
+		color:#F2F2F2;
+		animation:fadeIn 3s ease-in-out;
+		width:1280px;
+		height:660px;
+	}
+	.guide{
+		position:absolute;
+		left:45%;
+		top:6%;
+		opacity: 0;
+		animation:fadeInOut 4s ease;
+		animation-delay: 2.5s;
+		color:#f2f2f2;
+	}
+	@keyframes fadeIn {
+	  0% {
+	    opacity: 0;
+	  }
+	
+	  100% {
+	    opacity: 1;
+	  }
+	}
+	@keyframes fadeInOut {
+	  0% {
+	    opacity: 0;
+	  }
+	  50%{
+	  	opacity: 1;
+	  }
+	  100% {
+	    opacity: 0;
+	  }
+	}
+	</style>
+</head>
+	<body>
+	<div class="view">
+		<div class="guide"><p><i>Click to Navigate</i></p></div>
+		<div id="A1">
+		<div class="text left">The head lies there. His eyes closed looking peaceful.</div>
+		<div class="image right"><img src="A1.png"></div>
+		</div>
+	</div>
+
+
+		<script>
+			document.addEventListener('click',function(){
+				window.open('A2.html', '_self');
+			});
+
+		</script>
+	</body>
+</html>

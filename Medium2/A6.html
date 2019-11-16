@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500&display=swap" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+	<style>
+	body,html{
+		font-family: 'Cormorant Garamond', serif;
+		font-weight: 400;
+		font-size:20px;
+		margin:0;
+		padding:0;
+		cursor:e-resize;
+		background-image: linear-gradient(to right, #3f3f3f, #4c4c4c, #595959); 
+		height:100%;
+	}
+	.left{
+		position:absolute;
+		top:50%;
+		left:8%;
+	}
+	.right{
+		position:absolute;
+		top:50%;
+		right:8%;
+	}
+	.image{
+		margin-top: -20%;
+		height:480px;
+		width:350px;
+		border:1px;
+	}
+	img{
+		height:100%;
+		width:100%;
+	}
+	#A5{
+		position:absolute;
+		color:#F2F2F2;
+		animation: slideOut 3s ease-in-out forwards;
+		width:1280px;
+		height:660px;
+		left:0;
+	}
+	#A6{
+		position:absolute;
+		left:100%;
+		color:#F2F2F2;
+		animation-delay: 3s;
+		animation: fadeIn 3s ease-in-out;
+		width:1280px;
+		height:660px;
+	}
+	.circle{
+		position: absolute;
+		top:5%;
+		left:3%;
+		width:30px;
+		height:30px;
+		background: transparent;
+		border: 3px lightgrey solid;
+		border-radius: 50%;
+		animation:fadeIn 2.5s forwards;
+		animation-delay: 3s;
+		opacity:0;
+		cursor:pointer;
+	}
+	.words{
+		margin:0;
+		position: absolute;
+		top:5%;
+		left:8%;
+		color:lightgrey;
+		width:170px;
+		font-size: 16px;
+		opacity:0;
+	}
+	@keyframes fadeIn {
+	  0% {
+	    opacity: 0;
+	  }
+	
+	  100% {
+	    opacity: 1;
+	  }
+	}
+	@keyframes slideOut {
+	  0% {
+	    left: 0;
+	  }
+		100% {
+	    left: -102%;
+	  }
+	}
+	</style>
+</head>
+	<body>
+
+		<div id="A5">
+		<div class="text left" style="top:40%;">
+		They give back his belongings and he leaves the court. <br><br><br>
+		And from the penitentiary he steps into the outside world.
+		</div>
+		<div class="image right"><img src="A5.png"></div>
+
+		<div id="A6">
+		<div class="text left">
+		A policeman removes the handcuffs on him.
+		</div>
+		<div class="image right"><img src="A6.png"></div>
+		<div class="circle"></div>
+		<div class="words">What goes around comes back around.</div>
+		</div>
+
+		<script>
+
+			document.addEventListener('click',function(){
+				window.open('A7.html', '_self');
+			});
+
+			$( ".circle" ).mouseenter(function() {
+		  	$( ".words" ).css( 'opacity','1' );
+			});
+			$( ".circle" ).mouseout(function() {
+		  	$( ".words" ).css( 'opacity','0' );
+			});
+
+		</script>
+	</body>
+</html>

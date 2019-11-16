@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500&display=swap" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+	<style>
+	body,html{
+		font-family: 'Cormorant Garamond', serif;
+		font-weight: 400;
+		font-size:20px;
+		margin:0;
+		padding:0;
+		background-image: linear-gradient(to left, #0c0c0c, #191919,#262626);
+		height:100%;
+	}
+	.left{
+		position:absolute;
+		top:50%;
+		left:8%;
+	}
+	.right{
+		position:absolute;
+		top:50%;
+		right:8%;
+	}
+	.image{
+		margin-top: -20%;
+		height:480px;
+		width:350px;
+		border:1px;
+	}
+	img{
+		height:100%;
+		width:100%;
+	}
+	#B9{
+		position:absolute;
+		color:#F2F2F2;
+		animation: slideOut 3s ease-in-out forwards;
+		width:1280px;
+		height:660px;
+		left:0;
+	}
+	#B10{
+		position:absolute;
+		left:100%;
+		color:#F2F2F2;
+		animation-delay: 3s;
+		animation: fadeIn 3s ease-in-out;
+		width:1280px;
+		height:660px;
+	}
+	@keyframes fadeIn {
+	  0% {
+	    opacity: 0;
+	  }
+	
+	  100% {
+	    opacity: 1;
+	  }
+	}
+	@keyframes slideOut {
+	  0% {
+	    left: 0;
+	  }
+		100% {
+	    left: -102%;
+	  }
+	}
+	.later{
+		opacity:0;
+		animation:fadeIn 3s forwards;
+		animation-delay: 3.5s;
+	}
+	a { color: inherit; } 
+	</style>
+</head>
+	<body>
+
+		<div id="B9">
+		<div class="text right">
+		The blade cuts down and his head falls onto the ground.
+		</div>
+		<div class="image left"><img src="B9.jpg"></div>
+
+		<div id="B10">
+		<a href='A1.html' ><div class="text right" >
+		<u>The head lies there. His eyes closed looking peaceful.
+		</div> </a>
+		<div class="image left"><img src="A1.png"></div>
+		</div>
+
+		<script>
+
+		</script>
+	</body>
+</html>

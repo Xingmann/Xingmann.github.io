@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500&display=swap" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+	<style>
+	body,html{
+		font-family: 'Cormorant Garamond', serif;
+		font-weight: 400;
+		font-size:18px;
+		margin:0;
+		padding:0;
+		cursor:e-resize;
+	}
+	.left{
+		position:fixed;
+		top:50%;
+		left:8%;
+	}
+	.right{
+		position:fixed;
+		top:50%;
+		right:8%;
+	}
+	.image{
+		margin-top: -20%;
+		height:480px;
+		width:350px;
+		border:1px;
+	}
+	img{
+		height:100%;
+		width:100%;
+	}
+	#A1{
+		background-color: #0C0C0C;
+		color:#F2F2F2;
+		animation:fadeIn 3s ease-in-out;
+		width:1280px;
+		height:660px;
+	}
+	#A2{
+		background-color: #191919;
+		color:#F2F2F2;
+		animation:fadeIn 3s ease-in-out;
+		width:1280px;
+		height:660px;
+	}
+	@keyframes fadeIn {
+	  0% {
+	    opacity: 0;
+	  }
+	
+	  100% {
+	    opacity: 1;
+	  }
+	}
+	</style>
+</head>
+	<body>
+		<p id="log"></p>
+<!-- 		<div id="A1">
+		<div class="text left">The head lies there. His eyes closed looking peaceful.</div>
+		<div class="image right"><img src="A1.png"></div>
+		</div> -->
+
+<!-- 		<div id="A2" class="text left">The blade lifts up and his head returns to his neck.</div>
+		<div class="image right"><img src="A2.jpeg"></div> -->
+
+		<script>
+
+
+			document.addEventListener('keydown',logKey);
+			function logKey(e) {
+  				log.textContent += ` ${e.code}`;
+			}
+
+
+
+			// document.addEventListener('onclick',switchSlide);
+			// function switchSlide(){
+			// 	document.getElementById('A1').style.backgroundColor = "red";
+			// };
+
+			document.addEventListener('click',function(){
+				document.getElementById('A1').style.backgroundColor = "red";
+				$("#A1").animate
+			});
+
+		</script>
+	</body>
+</html>

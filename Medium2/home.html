@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<style>
+	body,html{
+		font-family: 'Cormorant Garamond', serif;
+		font-weight: 600;
+		font-size:24px;
+		margin:0; 
+		background:#d5c5b4;
+	}
+	span {position:absolute;left:100px; }
+	.T1{
+		letter-spacing: 5px;
+		position:absolute;
+		text-align: center;
+		top:35%;
+		left:30%;
+		animation:fadeIn 3s ease-in-out;
+	}
+	.T2{
+		letter-spacing: 5px;
+		position:absolute;
+		text-align: center;
+		top:50%;
+		left:30%;
+		animation:fadeIn 3s ease-in-out;
+	}
+	.pathA{
+		width:0px;
+		height:0px;
+		border-left:60px solid transparent;
+		border-right: 60px solid transparent;
+		border-bottom: 100px solid #0c0c0c;
+		position: absolute;	
+		left:9.6%;
+		top:40%;
+		opacity:0;
+	}
+	.pathB{
+		width:0px;
+		height:0px;
+		border-left:60px solid transparent;
+		border-right: 60px solid transparent;
+		border-top: 100px solid #0c0c0c;
+		position: absolute;	
+		left:80%;
+		top:44%;
+		animation:fadeIn 3s forwards;
+		animation-delay: 2s;
+		opacity:0;	
+	}
+	.sentence{
+		padding: 50px 10px;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 500;
+		position: absolute;
+		border:1px solid black;
+	}
+	img{
+		width:0px;
+		height:0px;
+	}
+	.circle{
+		width:60px;
+		height:60px;
+		background: #0c0c0c;
+		border-radius: 50%;
+		position:absolute;
+	}
+	.left{
+		left:12%;
+		top:45%;
+		animation:fadeIn 3s forwards;
+		animation-delay: 2s;
+		opacity:0;	
+	}
+	.right{
+		left:82.3%;
+		top:45%;
+		background-color:#d5c5b4;
+		opacity:0; 
+	}
+	.up{
+		left:4%;
+		top:5%;
+		opacity: 0;
+	}
+	.low{
+		left:70%;
+		top:66%;
+		opacity: 0;
+	}
+	@keyframes fadeIn {
+	  0% {
+	    opacity: 0;
+	  }
+	
+	  100% {
+	    opacity: 1;
+	  }
+	}
+	.guide{
+		position: absolute;
+		left:42%;
+		top:75%;
+		font-size: 18px;
+		animation:fadeIn 3s forwards;
+		opacity: 0;
+		animation-delay: 1s;
+	}
+</style>
+</head>
+<body>
+
+	<div class="pathA"></div>
+	<a href='A1.html'><div class="circle left"></div></a>
+	<p class="sentence up">The head lies there.<br><br>His eyes closed looking peaceful.</p>
+
+	<div class="guide"><p><u><i>Select A Start to Begin With</i></p></div>
+
+	<div class="T1">
+	<p>A<span><span>TALE<span><span>&nbsp&nbsp&nbsp&nbspOF</p>
+	</div>
+	<div class="T2">
+	<p>CAUSAL<span><span><span><span>LOOP</p>
+	</div>
+
+	<div class="pathB"><img src="https://media1.giphy.com/media/6SlkVRQWJxaAo/source.gif"></div>
+	<a href='B1.html'><div class="circle right"></div></a>
+	<p class="sentence low">Under the church bell,<br><br> the two young souls are now united forever.</p>
+	<audio autobuffer preload id="audio" src="https://europacontent.com/assets/sounds/sound-marimba.wav"></audio>
+
+	<script>
+
+		function playAudio(){
+ 		var audio = document.getElementById('audio');
+ 		audio.play();
+ 		}
+
+		var audio =  $('#audio');
+
+		$( ".left" ).mouseenter(function() {
+		  $( this ).css( 'background-color','#d5c5b4' );
+		  $( '.pathA' ).css('opacity','1');
+		  $( '.up' ).css('opacity','1');		  
+		  playAudio(audio);
+		});
+		$( ".left" ).mouseout(function() {
+		  $( this ).css( 'background-color','#0c0c0c' );
+		  $( '.pathA' ).css('opacity','0');
+		  $( '.up' ).css('opacity','0');
+		});
+
+		$( ".right" ).mouseenter(function() {
+		  $( this ).css('opacity','1');
+		  $( '.low' ).css('opacity','1');
+		  playAudio(audio);
+		});
+		$( ".right" ).mouseout(function() {
+		  $( this ).css('opacity','0');
+		  $( '.low' ).css('opacity','0');
+		});
+	</script>
+</body>
+</html>
